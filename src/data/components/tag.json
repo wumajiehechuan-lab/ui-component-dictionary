@@ -1,0 +1,90 @@
+[
+  {
+    "id": "colored-tags",
+    "category": "tag",
+    "name_zh": "彩色标签组",
+    "name_en": "Colored Tags",
+    "aliases": ["Tag Set"],
+    "when_to_use": "给内容打多色分类标签",
+    "prompt_en": "Build a single Colored Tags row, not a full page. Structure: five tags in different preset hues (soft background + matching text), some with a small leading dot. Interaction: hover slightly darkens a tag. States: default, hover, removable variant on one tag with ×. Motion: 120ms background transition. Do not use saturated fills with white text everywhere — prefer soft styles. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一行彩色标签，不是整页。结构：五个不同预设色相的标签（淡色底 + 同色系文字），部分带前置小圆点。交互：悬停略微加深。状态：默认、悬停、其中一个为可删除变体带 ×。动效：120ms 背景过渡。不要全用高饱和填充白字——优先淡色样式。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "colored", "tags": ["前端", "教程", "工具", "开源", "随笔"] }
+  },
+  {
+    "id": "notification-badge",
+    "category": "tag",
+    "name_zh": "通知角标",
+    "name_en": "Notification Badge",
+    "aliases": ["Bell Badge"],
+    "when_to_use": "图标右上角的红点/数字提醒",
+    "prompt_en": "Build a single Notification Badge on a bell icon, not a full page. Structure: a bell glyph button with a small red count badge at top-right (shows 99+ when large) and a dot-only variant beside it. Interaction: clicking the bell clears the count to a dot, clicking again removes the dot. States: count badge, dot badge, none. Motion: 150ms badge pop. Do not use two separate icons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个铃铛图标上的通知角标，不是整页。结构：铃铛符号按钮，右上角红色数字角标（超过 99 显示 99+），旁边一个纯红点变体。交互：点铃铛数字退化为红点，再点红点消失。状态：数字角标、红点角标、无。动效：150ms 角标弹入。不要用两个独立图标。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "badge", "count": 128 }
+  },
+  {
+    "id": "status-pill",
+    "category": "tag",
+    "name_zh": "状态胶囊",
+    "name_en": "Status Pill",
+    "aliases": [],
+    "when_to_use": "订单/任务状态的胶囊标识",
+    "prompt_en": "Build a single Status Pill, not a full page. Structure: a fully rounded pill with a leading dot and label (In progress), in soft accent color; show two more pills (Done in green, Failed in red) stacked beside. Interaction: hover slightly darkens. States: success, running, failed, neutral. Motion: none. Do not use sharp-corner rectangles. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个状态胶囊，不是整页。结构：全圆角胶囊：前置圆点 + 文字（进行中），淡强调色；旁边再叠两个（已完成绿色、失败红色）。交互：悬停略微加深。状态：成功、进行中、失败、中性。动效：无。不要用直角矩形。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "status-pill", "pills": ["进行中", "已完成", "失败"] }
+  },
+  {
+    "id": "chip-removable",
+    "category": "tag",
+    "name_zh": "可删标签组",
+    "name_en": "Removable Chips",
+    "aliases": [],
+    "when_to_use": "已选条件的删除标签组",
+    "prompt_en": "Build a single Removable Chips group, not a full page. Structure: three chips each with label and trailing ×; a Reset link appears when at least one is removed. Interaction: × removes a chip with fade, Reset restores all. States: full, partially removed (Reset visible), empty (Reset restores). Motion: 150ms chip fade-out. Do not use a text input — chips already exist. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组可删标签，不是整页。结构：三个 chip 各带文字与尾部 ×；至少删除一个后出现「重置」链接。交互：× 淡出移除 chip，重置恢复全部。状态：全量、部分删除（重置可见）、清空（重置恢复）。动效：150ms chip 淡出。不要用文本输入——chip 已存在。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "removable", "tags": ["分类：前端", "状态：已发布", "标签：教程"] }
+  },
+  {
+    "id": "outline-tag",
+    "category": "tag",
+    "name_zh": "描边标签",
+    "name_en": "Outline Tag",
+    "aliases": [],
+    "when_to_use": "轻量、不抢焦点的标签样式",
+    "prompt_en": "Build a single Outline Tag row, not a full page. Structure: four tags with transparent background, 1px border and muted text; one is accent-bordered to mark emphasis. Interaction: hover fills with a very soft tint. States: default, hover, emphasized. Motion: 120ms fill. Do not use filled backgrounds by default. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一行描边标签，不是整页。结构：四个透明底、1px 边框、灰文字的标签；其中一个强调色边框表示突出。交互：悬停出现极淡填充。状态：默认、悬停、强调。动效：120ms 填充。默认不要填充背景。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "outline", "tags": ["低优先级", "进行中", "已评审", "高优先级"], "emphasized": 3 }
+  },
+  {
+    "id": "count-tag",
+    "category": "tag",
+    "name_zh": "计数标签",
+    "name_en": "Count Tag",
+    "aliases": ["Segment Count"],
+    "when_to_use": "分类名后带数量的标签",
+    "prompt_en": "Build a single Count Tag list, not a full page. Structure: three rows of 'label + count chip' (e.g. 全部 212) where the count is a small rounded chip right-aligned; the first row is selected with accent text. Interaction: click a row to move selection. States: selected, unselected, hover. Motion: 120ms highlight. Do not use checkboxes. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组计数标签，不是整页。结构：三行「标签名 + 数量小片」（如 全部 212），数量为右对齐的圆角小片，第一行选中为强调色文字。交互：点行切换选中。状态：选中、未选中、悬停。动效：120ms 高亮。不要用勾选框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "count", "rows": [["全部", 212], ["已发布", 26], ["草稿", 8]] }
+  },
+  {
+    "id": "filter-tag-bar",
+    "category": "tag",
+    "name_zh": "筛选标签条",
+    "name_en": "Filter Tag Bar",
+    "aliases": [],
+    "when_to_use": "已启用筛选条件的汇总条",
+    "prompt_en": "Build a single Filter Tag Bar, not a full page. Structure: a row starting with a muted 筛选: label followed by three filter chips (each: name=value + ×), ending with a Clear all text button. Interaction: × removes one chip, Clear all empties the row and shows a subtle empty hint. States: with chips, empty, chip hover. Motion: 150ms chip removal. Do not add dropdowns for editing filters. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一条筛选标签条，不是整页。结构：行首灰色「筛选:」标签 + 三个筛选 chip（各为 名称=值 + ×）+ 行尾「清空」文字按钮。交互：× 移除单个 chip，清空后整行显示淡淡空提示。状态：有 chip、空、chip 悬停。动效：150ms chip 移除。不要加编辑筛选的下拉。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "filter-bar", "filters": ["状态=已发布", "分类=Tabs", "含=教程"] }
+  },
+  {
+    "id": "new-badge",
+    "category": "tag",
+    "name_zh": "NEW 角标",
+    "name_en": "New Badge",
+    "aliases": ["Corner Ribbon"],
+    "when_to_use": "标记新功能/新内容的角标",
+    "prompt_en": "Build a single New Badge, not a full page. Structure: a small demo block (feature row) with a corner ribbon or a compact NEW pill in accent gradient at its top-right. Interaction: hover tilts the badge slightly. States: default, hover, dismissed (hide animation). Motion: 150ms tilt. Do not cover the block's main text. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个 NEW 角标，不是整页。结构：一个小演示块（功能行），右上角为强调色渐变的紧凑 NEW 胶囊或角落丝带。交互：悬停时角标轻微倾斜。状态：默认、悬停、已忽略（隐藏动画）。动效：150ms 倾斜。不要遮住块内主文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "new-badge", "feature": "深色主题现已支持跟随系统" }
+  }
+]

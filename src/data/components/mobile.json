@@ -1,0 +1,134 @@
+[
+  {
+    "id": "swipe-cell",
+    "category": "mobile",
+    "name_zh": "滑动单元格",
+    "name_en": "Swipe Cell",
+    "aliases": ["Swipe Actions"],
+    "when_to_use": "列表行左滑露出操作按钮",
+    "prompt_en": "Build a single Swipe Cell inside a phone-width frame, not a full page. Structure: a list row that, when dragged left, reveals two action buttons (置顶, danger 删除) behind it. Interaction: drag the row horizontally with pointer, snap open/closed past a threshold, tap an action flashes and closes. States: closed, revealing, open, action flash. Motion: spring-like snap 200ms. Do not use a hover-only reveal. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机宽度的框内做一个滑动单元格，不是整页。结构：列表行向左拖动时，背后露出两个操作按钮（置顶、危险色删除）。交互：指针横向拖动行，超过阈值吸附开/合，点操作闪示后收起。状态：关闭、露出中、展开、操作闪示。动效：类弹簧吸附 200ms。不要用纯悬停露出。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "swipe-cell", "title": "备忘：买咖啡豆", "actions": ["置顶", "删除"] }
+  },
+  {
+    "id": "action-sheet",
+    "category": "mobile",
+    "name_zh": "动作面板",
+    "name_en": "Action Sheet",
+    "aliases": [],
+    "when_to_use": "移动端底部弹出的选项列表",
+    "prompt_en": "Build a single Action Sheet inside a phone frame, not a full page. Structure: a trigger button; tapping slides up a bottom panel with a title line, three option rows and a separated bold Cancel row, over a scrim. Interaction: tapping an option highlights and closes, scrim closes, Cancel closes. States: closed, open, option pressed. Motion: 250ms slide-up. Do not use a centered dialog. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个动作面板，不是整页。结构：触发按钮，点按后底部滑出面板：标题行、三个选项行、分隔的加粗取消行，带遮罩。交互：点选项高亮并关闭，遮罩关闭，取消关闭。状态：关闭、展开、选项按压。动效：250ms 上滑。不要用居中对话框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "action-sheet", "title": "分享到", "options": ["微信好友", "朋友圈", "复制链接"] }
+  },
+  {
+    "id": "mobile-search-bar",
+    "category": "mobile",
+    "name_zh": "移动搜索栏",
+    "name_en": "Mobile Search Bar",
+    "aliases": [],
+    "when_to_use": "App 顶部圆角搜索入口",
+    "prompt_en": "Build a single Mobile Search Bar inside a phone frame, not a full page. Structure: a pill-shaped gray search bar with magnifier glyph and placeholder 搜索, which on focus expands to full-width white with a 取消 text button appearing at right. Interaction: focus expands with animation, cancel collapses back. States: idle, focused/expanded, with text. Motion: 200ms expansion. Do not show a submit key row. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个移动搜索栏，不是整页。结构：胶囊形灰色搜索栏带放大镜符号与占位「搜索」，聚焦后扩展为全宽白底，右侧出现「取消」文字按钮。交互：聚焦展开带动画，取消收回。状态：空闲、聚焦展开、有文字。动效：200ms 展开。不要显示提交键行。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "search-bar" }
+  },
+  {
+    "id": "pull-refresh",
+    "category": "mobile",
+    "name_zh": "下拉刷新",
+    "name_en": "Pull to Refresh",
+    "aliases": [],
+    "when_to_use": "列表下拉触发刷新",
+    "prompt_en": "Build a single Pull-to-Refresh list inside a phone frame, not a full page. Structure: a scrollable list whose top hides a refresh indicator that appears as you over-scroll, showing progressive rotation with pull distance, then spins during a fake 1s refresh and a 'updated' flash. Interaction: drag the list down past the threshold, release to refresh. States: idle, pulling (indicator follows finger), refreshing, done flash. Motion: indicator rotation tracks drag, 300ms bounce back. Do not trigger refresh below the threshold. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个下拉刷新列表，不是整页。结构：可滚动列表，顶部藏着刷新指示器：过度下拉时随拉动距离渐进旋转，松手后假刷新 1 秒并闪示「已更新」。交互：下拉超过阈值后松手触发刷新。状态：空闲、拉动（指示器跟手）、刷新中、完成闪示。动效：指示器旋转跟手，300ms 回弹。未到阈值不要触发。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "pull-refresh" }
+  },
+  {
+    "id": "fab-menu",
+    "category": "mobile",
+    "name_zh": "展开式悬浮按钮",
+    "name_en": "FAB Speed Dial",
+    "aliases": [],
+    "when_to_use": "悬浮按钮展开多个子操作",
+    "prompt_en": "Build a single FAB Speed Dial inside a phone frame, not a full page. Structure: a circular plus FAB at bottom-right; tapping rotates it to × and fans out three labeled mini-FABs (拍照, 录音, 文件) upward with stagger. Interaction: tap to open/close, tap a mini action flashes and closes. States: closed, opening (stagger), open, closing. Motion: 200ms fan-out with 40ms stagger. Do not use a modal. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个展开式悬浮按钮，不是整页。结构：右下角圆形加号 FAB，点按旋转为 × 并向上扇出三个带标签的迷你按钮（拍照、录音、文件），带错峰。交互：点按开/合，点迷你动作闪示并收起。状态：关闭、展开中（错峰）、展开、收起。动效：200ms 扇出，40ms 错峰。不要用模态。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "fab-dial", "actions": ["拍照", "录音", "文件"] }
+  },
+  {
+    "id": "segmented-mobile",
+    "category": "mobile",
+    "name_zh": "移动分段控制",
+    "name_en": "iOS Segmented Control",
+    "aliases": [],
+    "when_to_use": "iOS 风格的视图切换",
+    "prompt_en": "Build a single iOS-style Segmented Control inside a phone frame, not a full page. Structure: a grey track with two equal segments (列表, 地图) and a white sliding thumb; a one-line content readout below switches with it. Interaction: tap a segment to slide the thumb. States: selected thumb left/right, pressed. Motion: thumb 200ms slide. Do not use three+ segments with icons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个 iOS 风格分段控制，不是整页。结构：灰轨道两等分段（列表、地图）+ 白色滑动块，下方一行内容读数联动。交互：点分段滑动滑块。状态：滑块在左/右、按压。动效：滑块 200ms 滑动。不要做三个以上带图标的分段。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "segmented", "segments": ["列表", "地图"] }
+  },
+  {
+    "id": "index-list",
+    "category": "mobile",
+    "name_zh": "通讯录索引列表",
+    "name_en": "Index List",
+    "aliases": ["Contact List"],
+    "when_to_use": "按字母索引分组的联系人列表",
+    "prompt_en": "Build a single Index List inside a phone frame, not a full page. Structure: a scrollable contact list grouped by letter headers (A, B, C…) with an alphabet rail on the right edge; the floating letter bubble shows the section while scrolling. Interaction: tap a rail letter to jump-scroll to that group; scrolling updates the bubble. States: group headers, rail hover/active, bubble visible. Motion: 200ms jump scroll. Do not use a real search input. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个通讯录索引列表，不是整页。结构：按字母分组头（A、B、C…）的可滚动联系人列表，右缘字母索引栏；滚动时悬浮字母气泡显示当前组。交互：点索引字母跳滚到该组，滚动时气泡更新。状态：分组头、索引悬停/激活、气泡可见。动效：200ms 跳滚。不要加真实搜索框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "index-list", "groups": { "A": ["阿福"], "B": ["白露", "北野"], "C": ["陈晨", "程一", "崔嵬"], "L": ["林深"], "W": ["吴限", "五竹"] } }
+  },
+  {
+    "id": "number-keyboard",
+    "category": "mobile",
+    "name_zh": "数字键盘",
+    "name_en": "Number Keyboard",
+    "aliases": ["Amount Keyboard"],
+    "when_to_use": "支付金额的自定义数字键盘",
+    "prompt_en": "Build a single Number Keyboard panel inside a phone frame, not a full page. Structure: an amount display on top and a 4x3 grid keyboard (1-9, dot, 0, delete) below, each key a soft-tap cell. Interaction: tapping keys builds the amount display (max two decimals), delete removes last char. States: keys default/pressed, display empty/filled. Motion: 80ms key press. Do not use the system keyboard. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个数字键盘面板，不是整页。结构：上方金额显示，下方 4x3 键盘网格（1-9、小数点、0、删除），每键为软点按格。交互：点键构建金额显示（最多两位小数），删除去掉末字符。状态：按键默认/按压、显示空/有值。动效：80ms 按键反馈。不要唤起系统键盘。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "number-keyboard", "prefix": "¥" }
+  },
+  {
+    "id": "onboarding-carousel",
+    "category": "mobile",
+    "name_zh": "引导轮播",
+    "name_en": "Onboarding Carousel",
+    "aliases": ["Intro Swiper"],
+    "when_to_use": "首次启动的功能引导轮播",
+    "prompt_en": "Build a single Onboarding Carousel inside a phone frame, not a full page. Structure: three swipeable full-width pages (gradient placeholder + title + one-liner), dot indicators below, and a Skip link plus a Next/开始 button. Interaction: swipe or arrow-drag horizontally to change pages, Skip jumps to last, dots reflect position. States: page 1/2/3, dragging, last page (button label 开始使用). Motion: 300ms page slide with drag tracking. Do not auto-play. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个引导轮播，不是整页。结构：三个可横滑的整屏页（渐变占位 + 标题 + 一行说明）、下方圆点指示、Skip 链接和 Next/开始按钮。交互：横向拖拽翻页，Skip 跳到末页，圆点反映位置。状态：第 1/2/3 页、拖拽中、末页（按钮文字变「开始使用」）。动效：300ms 翻页并跟手。不要自动播放。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "carousel", "pages": [["记录孩子的进步", "每一次练习都有迹可循"], ["科学的练习节奏", "少即是多，贵在坚持"], ["全家一起参与", "陪伴是最好的教育"]] }
+  },
+  {
+    "id": "badge-tabbar-plus",
+    "category": "mobile",
+    "name_zh": "中央凸起导航",
+    "name_en": "Notched Tab Bar",
+    "aliases": ["Center FAB Tab Bar"],
+    "when_to_use": "中间凸起主操作的底部导航",
+    "prompt_en": "Build a single Notched Tab Bar inside a phone frame, not a full page. Structure: a bottom bar with four small items and a center circular accent button rising above the bar edge in a notch. Interaction: tap items to switch active tint, center button bumps on press. States: active item, inactive, center pressed. Motion: 150ms transitions. Do not place labels on the center button. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个中央凸起导航，不是整页。结构：底部栏四个小项，中央强调色圆形按钮在缺口处高出栏边。交互：点项切换活动着色，中央按钮按压弹跳。状态：活动项、非活动、中央按压。动效：150ms 过渡。中央按钮不要放文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "notched-tabbar", "items": ["首页", "任务", "报告", "我的"] }
+  },
+  {
+    "id": "phone-otp-verify",
+    "category": "mobile",
+    "name_zh": "手机验证面板",
+    "name_en": "SMS Verify Panel",
+    "aliases": [],
+    "when_to_use": "手机号+验证码的移动端组合",
+    "prompt_en": "Build a single SMS Verify Panel inside a phone frame, not a full page. Structure: a phone number row, a four-box code row, a resend-countdown text button, and a primary verify button. Interaction: typing digits auto-advances, resend shows countdown after first send, verify disabled until complete. States: empty, filling, complete (verify enabled), countdown. Motion: 150ms state transitions. Do not use a single input for the code. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个短信验证面板，不是整页。结构：手机号行、四格验证码行、重发倒计时文字按钮、主验证按钮。交互：输入数字自动跳格，首次发送后重发进入倒计时，码满后验证才可用。状态：空、输入中、填满（验证可用）、倒计时。动效：150ms 状态过渡。验证码不要用单输入框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "sms-verify" }
+  },
+  {
+    "id": "haptic-toggle-list",
+    "category": "mobile",
+    "name_zh": "设置开关列表",
+    "name_en": "Settings Toggle List",
+    "aliases": ["Switch Cell"],
+    "when_to_use": "iOS 设置页风格的开关行",
+    "prompt_en": "Build a single Settings Toggle List inside a phone frame, not a full page. Structure: three grouped rows (通知提醒, 同步, 省流量) each with label and an iOS-style switch; rows separated by hairline dividers inside a rounded group. Interaction: tapping a switch animates the knob and flips the color; the middle one starts on. States: on, off, pressing. Motion: 200ms knob slide. Do not use checkboxes. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "在手机框内做一个设置开关列表，不是整页。结构：三行分组（通知提醒、同步、省流量），每行为标签 + iOS 风格开关，行间发丝分隔线包在圆角组内。交互：点开关滑块动画换色，中间一项初始为开。状态：开、关、按压。动效：200ms 滑块滑动。不要用勾选框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "mobile-demo", "variant": "toggle-list", "items": [["通知提醒", true], ["同步", false], ["省流量", false]] }
+  }
+]

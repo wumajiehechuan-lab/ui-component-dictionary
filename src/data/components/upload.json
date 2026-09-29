@@ -1,0 +1,68 @@
+[
+  {
+    "id": "click-upload",
+    "category": "upload",
+    "name_zh": "点击上传",
+    "name_en": "Upload Button",
+    "aliases": [],
+    "when_to_use": "最简单的文件上传入口",
+    "prompt_en": "Build a single Click Upload control, not a full page. Structure: an upload icon button labeled Upload; after choosing a fake file, a single file row (name, size, remove ×) appears below. Interaction: click to simulate choosing a file, × removes the row. States: idle, uploading (progress 0-100 simulated), done (ok check), removed. Motion: row 150ms slide-in, progress 1s simulated. Do not include a drag-over area. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个点击上传控件，不是整页。结构：上传图标按钮文字 Upload；选择模拟文件后，下方出现一行文件（名称、大小、删除 ×）。交互：点击模拟选文件，× 移除该行。状态：空闲、上传中（模拟 0-100 进度）、完成（打勾）、已移除。动效：行 150ms 滑入，进度模拟 1 秒。不要包含拖拽区域。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "click" }
+  },
+  {
+    "id": "drag-upload",
+    "category": "upload",
+    "name_zh": "拖拽上传",
+    "name_en": "Drag Upload",
+    "aliases": ["Dropzone"],
+    "when_to_use": "大文件/多文件的拖放上传区",
+    "prompt_en": "Build a single Dropzone, not a full page. Structure: a dashed-border area with an upload glyph and text 'Click or drag files here'. Interaction: dragover highlights the area, dropping a fake file adds it to an in-area file list with progress; click also opens the file picker. States: idle, dragover (accent border + tint), uploading, done. Motion: 150ms highlight transition. Do not use a solid border. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个拖拽上传区，不是整页。结构：虚线边框区域，内有上传符号和文字「点击或拖拽文件到此处」。交互：拖入悬停时高亮，松手放入模拟文件并在区域内列出并带进度；点击也可打开选择器。状态：空闲、拖入悬停（强调色边框 + 着色）、上传中、完成。动效：150ms 高亮过渡。不要用实线边框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "drag" }
+  },
+  {
+    "id": "avatar-upload",
+    "category": "upload",
+    "name_zh": "头像上传",
+    "name_en": "Avatar Upload",
+    "aliases": [],
+    "when_to_use": "个人资料头像更换",
+    "prompt_en": "Build a single Avatar Upload, not a full page. Structure: a 72px circular preview (letter monogram as placeholder) with a small camera badge button at its bottom-right. Interaction: click the badge to simulate picking an image, preview briefly shows an uploading ring then a new monogram/color. States: empty placeholder, uploading (ring spinner), updated. Motion: 300ms ring animation. Do not use a rectangular preview. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个头像上传，不是整页。结构：72px 圆形预览（占位用字母 monogram），右下角小相机角标按钮。交互：点角标模拟选图，预览先显示上传圆环再换成新的字母/颜色。状态：空占位、上传中（圆环）、已更新。动效：300ms 圆环动画。不要用矩形预览。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "avatar" }
+  },
+  {
+    "id": "photo-wall-upload",
+    "category": "upload",
+    "name_zh": "照片墙上传",
+    "name_en": "Photo Wall Upload",
+    "aliases": ["Picture Card Upload"],
+    "when_to_use": "多图上传以缩略卡片展示",
+    "prompt_en": "Build a single Photo Wall Upload, not a full page. Structure: a 3-column grid of square picture cards; the last cell is an add tile with a plus; each uploaded tile shows a colored-gradient placeholder thumbnail with hover × and progress bar. Interaction: click add to simulate an upload filling a new tile, hover a tile shows remove ×. States: adding tile, uploading (progress), done, removing. Motion: tile 200ms pop-in. Do not list files as text rows. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个照片墙上传，不是整页。结构：3 列方形图片卡片网格，最后一个是带加号的添加格；已上传格显示渐变色占位缩略图，悬停出现 × 和进度条。交互：点添加模拟上传填充新格，悬停出现删除 ×。状态：添加格、上传中（进度）、完成、移除中。动效：格子 200ms 弹入。不要用文字行列表文件。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "photo-wall", "initial": 2 }
+  },
+  {
+    "id": "file-list-upload",
+    "category": "upload",
+    "name_zh": "文件列表上传",
+    "name_en": "File List Upload",
+    "aliases": [],
+    "when_to_use": "多文件上传并以列表管理",
+    "prompt_en": "Build a single File List Upload, not a full page. Structure: a dropzone on top and below it a list of file rows (type glyph, name, size, progress bar or ok check, remove ×). Interaction: add up to three fake files, each row animates its progress to done; × deletes a row. States: row uploading, row done, row error (one seeded failure with retry link). Motion: 150ms row slide-in, progress fill. Do not use thumbnails. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个文件列表上传，不是整页。结构：上方拖放区，下方文件行列表（类型符号、名称、大小、进度条或完成勾、删除 ×）。交互：可添加最多三个模拟文件，每行进度动画到完成；× 删除该行。状态：行上传中、行完成、行错误（预置一条失败带重试链接）。动效：行 150ms 滑入、进度填充。不要用缩略图。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "file-list" }
+  },
+  {
+    "id": "folder-upload",
+    "category": "upload",
+    "name_zh": "文件夹上传",
+    "name_en": "Folder Upload",
+    "aliases": ["Directory Upload"],
+    "when_to_use": "整目录结构上传",
+    "prompt_en": "Build a single Folder Upload, not a full page. Structure: a button labeled Upload folder; after a fake pick, it shows an indented tree of two folders containing files, each leaf with a mini progress bar. Interaction: expanding/collapsing folder rows, per-file progress animates. States: idle, tree shown, uploading leaves, done leaves. Motion: 150ms expand. Do not flatten the structure into a single list. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个文件夹上传，不是整页。结构：按钮文字 Upload folder；模拟选择后显示两层级缩进树（两个文件夹内含文件），每个叶子文件带迷你进度条。交互：文件夹行可展开/收起，叶子文件进度动画。状态：空闲、树展示、叶子上传中、叶子完成。动效：150ms 展开。不要把结构压平成单列表。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "upload", "variant": "folder" }
+  }
+]

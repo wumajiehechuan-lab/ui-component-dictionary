@@ -1,0 +1,90 @@
+[
+  {
+    "id": "spinner",
+    "category": "loading",
+    "name_zh": "旋转加载",
+    "name_en": "Spinner",
+    "aliases": ["Loading Icon"],
+    "when_to_use": "最通用的加载符号",
+    "prompt_en": "Build a single Spinner row, not a full page. Structure: three sizes of circular spinners (16/24/32px) with a muted 加载中… label beside the middle one. Interaction: none. States: spinning, paused (for reduced-motion media query). Motion: continuous 700ms linear rotation. Do not use animated GIFs. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组旋转加载符号，不是整页。结构：三个尺寸的圆环 spinner（16/24/32px），中等尺寸旁配灰色「加载中…」文字。交互：无。状态：旋转中、暂停（响应 reduced-motion 媒体查询）。动效：700ms 线性持续旋转。不要用 GIF 动图。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "spinner" }
+  },
+  {
+    "id": "dots-loading",
+    "category": "loading",
+    "name_zh": "点点加载",
+    "name_en": "Loading Dots",
+    "aliases": ["Typing Indicator"],
+    "when_to_use": "聊天等待回复的轻量指示",
+    "prompt_en": "Build a single Loading Dots indicator, not a full page. Structure: three small dots bouncing in sequence inside a chat-bubble-shaped container. Interaction: none. States: bouncing loop. Motion: staggered bounce 600ms cycle. Do not add text. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个点点加载指示，不是整页。结构：聊天气泡形容器内三个小圆点按次序弹跳。交互：无。状态：循环弹跳。动效：600ms 循环错峰弹跳。不要加文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "dots" }
+  },
+  {
+    "id": "progress-bar",
+    "category": "loading",
+    "name_zh": "进度条",
+    "name_en": "Progress Bar",
+    "aliases": [],
+    "when_to_use": "可量化的任务进度",
+    "prompt_en": "Build a single Progress Bar, not a full page. Structure: a thin rounded track with an accent fill at 68% and a percentage label at the right. Interaction: a small +/- control adjusts the value in steps of 10. States: normal, indeterminate (striped animation), complete (turns ok color). Motion: fill 200ms ease. Do not use a circular indicator. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个进度条，不是整页。结构：细圆角轨道，强调色填充 68%，右侧百分比标签。交互：小 +/- 控件按 10 步进调节。状态：正常、不确定态（条纹动画）、完成（变成功色）。动效：填充 200ms 缓动。不要用环形指示。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "progress", "value": 68 }
+  },
+  {
+    "id": "circular-progress",
+    "category": "loading",
+    "name_zh": "环形进度",
+    "name_en": "Circular Progress",
+    "aliases": ["Progress Ring"],
+    "when_to_use": "紧凑空间的百分比进度",
+    "prompt_en": "Build a single Circular Progress ring, not a full page. Structure: a 64px SVG ring with the accent arc at 72% and the percentage number centered. Interaction: none required; value animates on mount. States: animating, complete (full circle turns ok color). Motion: arc sweeps 600ms ease-out on mount. Do not use canvas. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个环形进度，不是整页。结构：64px SVG 圆环，强调色弧线到 72%，中心显示百分比数字。交互：可无；挂载时数值动画。状态：动画中、完成（整圆变成功色）。动效：弧线挂载时 600ms ease-out 扫过。不要用 canvas。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "ring", "value": 72 }
+  },
+  {
+    "id": "skeleton-screen",
+    "category": "loading",
+    "name_zh": "骨架屏",
+    "name_en": "Skeleton",
+    "aliases": ["Placeholder"],
+    "when_to_use": "内容加载前的结构占位",
+    "prompt_en": "Build a single Skeleton card placeholder, not a full page. Structure: a card-shaped block with a skeleton avatar circle, two skeleton text lines of different widths, and a skeleton image block, all with a shimmer sweep. Interaction: a toggle switches between skeleton and loaded (real short text) states. States: skeleton, loaded. Motion: 1.2s shimmer loop. Do not use plain gray boxes without shimmer. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个骨架屏卡片占位，不是整页。结构：卡片形区块：圆形头像骨架、两条不同宽度的文字骨架、图片块骨架，全部带微光扫过效果。交互：一个开关在骨架与已加载（真实短文本）之间切换。状态：骨架、已加载。动效：1.2s 微光循环。不要用没有微光的纯灰块。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "skeleton" }
+  },
+  {
+    "id": "overlay-loading",
+    "category": "loading",
+    "name_zh": "遮罩加载",
+    "name_en": "Overlay Loading",
+    "aliases": ["Block Loading"],
+    "when_to_use": "区域级加载中锁定交互",
+    "prompt_en": "Build a single Overlay Loading, not a full page. Structure: a small content panel behind a semi-transparent scrim with a centered spinner and 加载中 text; a Refresh button replays the 2s loading. Interaction: content is pointer-blocked while loading; Refresh replays. States: normal, loading (scrim + spinner), back to normal. Motion: scrim fade 150ms, spinner continuous. Do not dim the whole page — only the panel. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个遮罩加载，不是整页。结构：小内容面板覆盖半透明遮罩，中央 spinner + 「加载中」文字；刷新按钮重播 2 秒加载。交互：加载中面板禁止点击；刷新重播。状态：正常、加载中（遮罩 + spinner）、恢复。动效：遮罩 150ms 淡入，spinner 持续。不要变暗整页——只遮面板。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "overlay" }
+  },
+  {
+    "id": "skeleton-table",
+    "category": "loading",
+    "name_zh": "表格骨架",
+    "name_en": "Skeleton Table",
+    "aliases": [],
+    "when_to_use": "表格数据加载前的行占位",
+    "prompt_en": "Build a single Skeleton Table, not a full page. Structure: a table-shaped skeleton with a header row and four body rows of shimmering cell bars of varied widths. Interaction: a Load button swaps it to a real two-column mini table after 1s. States: skeleton, loading transition, loaded. Motion: shimmer loop, 200ms swap fade. Do not leave cells empty. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个表格骨架，不是整页。结构：表格形骨架：表头行 + 四行不同宽度的微光单元格条。交互：Load 按钮 1 秒后切换成真实的两列迷你表格。状态：骨架、切换中、已加载。动效：微光循环，200ms 切换淡入。单元格不要留空。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "skeleton-table" }
+  },
+  {
+    "id": "typing-loading",
+    "category": "loading",
+    "name_zh": "打字机加载",
+    "name_en": "Streaming Text",
+    "aliases": ["Typewriter"],
+    "when_to_use": "AI 回复流式输出的打字效果",
+    "prompt_en": "Build a single Streaming Text demo, not a full page. Structure: a paragraph area where a fixed sentence types out character by character with a blinking caret; a Replay control restarts it. Interaction: Replay restarts typing. States: typing, done (caret keeps blinking briefly then hides). Motion: character-by-character with 30ms interval. Do not reveal the whole text at once. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个流式文本演示，不是整页。结构：段落区按字符逐个打出固定句子，带闪烁光标；Replay 控件重播。交互：Replay 重新打字。状态：打字中、完成（光标短暂闪烁后隐藏）。动效：逐字出现，间隔 30ms。不要一次性显示全文。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "loading-demo", "variant": "typing", "text": "你好，我是你的 AI 助手，正在为你生成回复…" }
+  }
+]

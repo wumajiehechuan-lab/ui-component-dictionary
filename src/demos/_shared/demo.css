@@ -1,0 +1,408 @@
+/* demo.css —— 演示组件公共样式（.d-* 前缀命名空间），只引用 tokens 变量 */
+
+.d-root {
+  width: 100%;
+  max-width: 320px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* 通用按钮 */
+.d-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.d-btn:hover {
+  background: var(--surface-hover);
+}
+
+.d-btn.open {
+  border-color: var(--accent);
+}
+
+/* 通用输入框 */
+.d-input {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.d-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* 下拉面板 */
+.d-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: auto;
+  min-width: 100%;
+  z-index: 30;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  padding: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.d-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.d-option:hover,
+.d-option.highlighted {
+  background: var(--surface-hover);
+}
+
+.d-option.selected {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* chip */
+.d-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.d-chip-x {
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 0 2px;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.d-chip-x:hover {
+  opacity: 1;
+}
+
+/* 下拉多选触发框 */
+.d-select-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 3px 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.d-select-box:focus-within {
+  border-color: var(--accent);
+}
+
+.d-select-arrow {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 11px;
+  transition: transform 0.15s ease;
+}
+
+.d-select-arrow.open {
+  transform: rotate(180deg);
+}
+
+.d-placeholder {
+  color: var(--text-muted);
+}
+
+/* Tab 基础样式（各变体在此基础上覆盖） */
+.d-tablist {
+  display: flex;
+  gap: 2px;
+  position: relative;
+}
+
+.d-tab {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 7px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.d-tab:hover {
+  color: var(--text);
+}
+
+.d-tab[aria-selected='true'] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.d-panel {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px 14px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+.d-panel strong {
+  color: var(--text);
+}
+
+/* 滑动指示器 */
+.d-indicator {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: left 0.25s ease, width 0.25s ease;
+}
+
+/* 列表盒 / 树 */
+.d-listbox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  max-height: 160px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.d-tree-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.d-tree-row:hover {
+  background: var(--surface-hover);
+}
+
+.d-tree-row.selected {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.d-tree-children {
+  margin-left: 18px;
+  border-left: 1px dashed var(--border-strong);
+  padding-left: 4px;
+}
+
+.d-caret {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  width: 18px;
+  padding: 0;
+  font-size: 10px;
+}
+
+/* 加载态 */
+.d-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 8px 10px;
+}
+
+.d-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: d-spin 0.7s linear infinite;
+}
+
+@keyframes d-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 浮层/骨架/文本动效 */
+@keyframes d-pop {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes d-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes d-slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes d-slide-left {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes d-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+}
+
+/* 微光扫过（骨架屏） */
+.d-shimmer {
+  background-image: linear-gradient(90deg, var(--border) 25%, var(--surface-hover) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: d-shimmer 1.2s linear infinite;
+}
+
+@keyframes d-shimmer {
+  to { background-position: -200% 0; }
+}
+
+/* 微光文字（AI 思考中） */
+.d-shimmer-text {
+  background: linear-gradient(90deg, var(--text-muted) 30%, var(--accent) 50%, var(--text-muted) 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: d-shimmer 1.5s linear infinite;
+}
+
+/* 打字机光标 */
+.d-caret-blink {
+  animation: d-blink 0.8s step-end infinite;
+}
+
+@keyframes d-blink {
+  50% { opacity: 0; }
+}
+
+/* OTP / 小格输入 */
+.d-otp {
+  display: flex;
+  gap: 8px;
+}
+
+.d-otp input {
+  width: 38px;
+  height: 44px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.d-otp input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.d-otp input.filled {
+  border-color: var(--accent);
+}
+
+.d-otp-cell.filled {
+  border-color: var(--accent) !important;
+}
+
+/* 行内编辑 */
+.d-inline-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px dashed transparent;
+  cursor: text;
+  font-size: 13px;
+}
+
+.d-inline-edit:hover {
+  border-color: var(--border-strong);
+  background: var(--surface);
+}
+
+/* 演示标签（demo 内小字说明） */
+.d-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* 空状态 / 占位 */
+.d-empty {
+  border: 1px dashed var(--border-strong);
+  border-radius: 10px;
+  padding: 26px 18px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  width: 100%;
+}
+
+.d-empty .icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}

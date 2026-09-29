@@ -1,0 +1,90 @@
+[
+  {
+    "id": "basic-slider",
+    "category": "slider",
+    "name_zh": "基础滑块",
+    "name_en": "Slider",
+    "aliases": ["Range Input"],
+    "when_to_use": "在连续区间内选一个数值",
+    "prompt_en": "Build a single Slider, not a full page. Structure: a horizontal track with one draggable thumb, a filled portion to the left of the thumb, and a value readout showing 0-100. Interaction: drag the thumb, click anywhere on the track to jump, arrow keys adjust by 1. States: default, hover (thumb grows slightly), dragging (thumb scale up), disabled. Motion: thumb 100ms scale. Do not use two thumbs. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个基础滑块，不是整页。结构：横向轨道 + 单个可拖动滑块，滑块左侧轨道填充，旁边显示 0-100 数值。交互：拖动滑块、点击轨道任意处跳转、方向键步进 1。状态：默认、悬停（滑块略大）、拖动中（放大）、禁用。动效：滑块 100ms 缩放。不要用双滑块。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 40 }
+  },
+  {
+    "id": "range-slider",
+    "category": "slider",
+    "name_zh": "区间滑块",
+    "name_en": "Range Slider",
+    "aliases": ["Dual Slider"],
+    "when_to_use": "选一段区间，如价格范围",
+    "prompt_en": "Build a single Range Slider, not a full page. Structure: one track with two thumbs (min and max) and the segment between them filled; two value readouts at the ends. Interaction: drag either thumb, thumbs cannot cross, click track to move nearest thumb. States: default, thumb hover, dragging, segment filled. Motion: 100ms thumb scale. Do not use a single thumb. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个区间滑块，不是整页。结构：一条轨道两个滑块（最小/最大），两滑块之间的轨道段填充，两端各显示数值。交互：拖动任一滑块，两滑块不可交叉，点轨道时最近的滑块移动。状态：默认、滑块悬停、拖动中、区间填充。动效：滑块 100ms 缩放。不要用单滑块。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": [25, 70], "range": true }
+  },
+  {
+    "id": "marks-slider",
+    "category": "slider",
+    "name_zh": "带刻度滑块",
+    "name_en": "Slider with Marks",
+    "aliases": ["Stepped Slider"],
+    "when_to_use": "离散档位选择，如音量档位",
+    "prompt_en": "Build a single Stepped Slider with Marks, not a full page. Structure: a track with tick marks at 0/25/50/75/100 labeled below, thumb snaps only to marks. Interaction: drag snaps to nearest mark, click a mark to jump. States: default, dragging, mark label highlighted when active. Motion: thumb snaps with 120ms ease. Do not allow free positions between marks. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个带刻度滑块，不是整页。结构：轨道上有 0/25/50/75/100 刻度点并在下方标数字，滑块只能吸附到刻度。交互：拖动吸附最近刻度，点刻度跳转。状态：默认、拖动中、活动刻度标签高亮。动效：吸附 120ms 缓动。刻度之间不允许自由停留。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 50, "marks": [0, 25, 50, 75, 100] }
+  },
+  {
+    "id": "vertical-slider",
+    "category": "slider",
+    "name_zh": "垂直滑块",
+    "name_en": "Vertical Slider",
+    "aliases": [],
+    "when_to_use": "调音台等纵向布局",
+    "prompt_en": "Build a single Vertical Slider, not a full page. Structure: a vertical track about 120px tall with one thumb and a filled portion below the thumb, value readout beside it. Interaction: drag vertically, arrow keys adjust. States: default, dragging, disabled. Motion: 100ms thumb scale. Do not rotate a horizontal slider visually — implement vertical geometry. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个垂直滑块，不是整页。结构：高约 120px 的纵向轨道 + 单滑块，滑块下方轨道填充，旁边显示数值。交互：纵向拖动、方向键调节。状态：默认、拖动中、禁用。动效：100ms 滑块缩放。不要把横向滑块视觉旋转——要实现纵向几何。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 60, "vertical": true }
+  },
+  {
+    "id": "slider-with-input",
+    "category": "slider",
+    "name_zh": "滑块加输入框",
+    "name_en": "Slider with Number Input",
+    "aliases": [],
+    "when_to_use": "拖动与精确输入并用",
+    "prompt_en": "Build a single Slider paired with a Number Input, not a full page. Structure: a horizontal slider on top and a small numeric input box to its right, both bound to the same value. Interaction: dragging updates the input, typing a valid number updates the thumb, out-of-range input clamps on blur. States: default, focused input, dragging, clamped flash. Motion: 100ms thumb movement. Do not let the two get out of sync. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个滑块加数字输入框，不是整页。结构：上方横向滑块，右侧小数字输入框，两者绑定同一个值。交互：拖动更新输入框，输入合法数字更新滑块，越界输入在失焦时收敛。状态：默认、输入聚焦、拖动中、越界收敛提示。动效：滑块 100ms 移动。两者不允许失步。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 30, "withInput": true }
+  },
+  {
+    "id": "tooltip-slider",
+    "category": "slider",
+    "name_zh": "气泡提示滑块",
+    "name_en": "Slider with Tooltip",
+    "aliases": [],
+    "when_to_use": "拖动时实时显示数值气泡",
+    "prompt_en": "Build a single Slider with Tooltip, not a full page. Structure: a horizontal slider whose current value shows in a small bubble above the thumb while dragging or hovering. Interaction: drag shows the bubble following the thumb, release keeps or hides it. States: idle (bubble hidden), dragging (bubble visible), hover. Motion: bubble fades 100ms, follows thumb continuously. Do not show a static side readout instead of the bubble. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个气泡提示滑块，不是整页。结构：横向滑块，拖动或悬停时滑块上方小气泡实时显示当前值。交互：拖动时气泡跟随滑块，松手后保留或隐藏。状态：空闲（气泡隐藏）、拖动中（气泡可见）、悬停。动效：气泡 100ms 淡入并连续跟随。不要用旁边静态数字代替气泡。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 65, "tooltip": true }
+  },
+  {
+    "id": "gradient-slider",
+    "category": "slider",
+    "name_zh": "渐变轨道滑块",
+    "name_en": "Gradient Slider",
+    "aliases": [],
+    "when_to_use": "色相/透明度等渐变取值",
+    "prompt_en": "Build a single Gradient Slider, not a full page. Structure: a horizontal slider whose track is a left-to-right gradient (e.g. hue rainbow or gray-to-color), with a ring-style thumb. Interaction: drag to pick a position; the readout shows the picked value. States: default, dragging. Motion: thumb 100ms scale. Do not use a plain filled track. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个渐变轨道滑块，不是整页。结构：轨道从左到右为渐变（如彩虹色相或灰到彩色），滑块为圆环样式。交互：拖动取值，读数显示所选值。状态：默认、拖动中。动效：滑块 100ms 缩放。不要用普通填充轨道。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 360, "defaultValue": 210, "gradient": "linear-gradient(to right,#f87171,#facc15,#4ade80,#60a5fa,#c084fc)" }
+  },
+  {
+    "id": "volume-slider",
+    "category": "slider",
+    "name_zh": "音量滑块",
+    "name_en": "Volume Slider",
+    "aliases": [],
+    "when_to_use": "媒体音量调节的典型场景",
+    "prompt_en": "Build a single Volume Slider row, not a full page. Structure: a speaker icon on the left, a compact slider, and a percentage readout on the right; muting (value 0) changes the icon. Interaction: drag to adjust, click the icon to toggle mute (stores previous value). States: normal, muted (icon swaps + slider empty), dragging. Motion: 120ms icon swap. Do not exceed the slider with extra controls. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个音量滑块行，不是整页。结构：左侧喇叭图标、中间紧凑滑块、右侧百分比读数；值为 0 时图标切换为静音样式。交互：拖动调节，点图标切换静音（记忆之前的值）。状态：正常、静音（图标切换 + 轨道清空）、拖动中。动效：120ms 图标切换。不要在滑块之外加多余控件。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "slider", "min": 0, "max": 100, "defaultValue": 45, "volume": true }
+  }
+]

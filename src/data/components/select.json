@@ -1,0 +1,53 @@
+[
+  {
+    "id": "native-select",
+    "category": "select",
+    "name_zh": "原生下拉",
+    "name_en": "Native Select",
+    "aliases": ["HTML Select"],
+    "when_to_use": "移动端友好、零依赖的原生下拉",
+    "prompt_en": "Build a single styled Native Select, not a full page. Structure: a real <select> element styled to match the design system: custom border, radius, and a chevron overlay while keeping native behavior. Interaction: native open/select behavior, change updates a readout line. States: default, focus, disabled, option selected. Motion: none (native). Do not rebuild the dropdown panel in JS. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个样式化原生下拉，不是整页。结构：真实的 <select> 元素，外观与设计系统一致：自定义边框、圆角、叠加箭头符号，但保留原生行为。交互：原生展开/选择行为，变更后更新一行读数。状态：默认、聚焦、禁用、选项已选。动效：无（原生）。不要用 JS 重写下拉面板。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "native-select", "options": ["北京", "上海", "广州", "深圳"] }
+  },
+  {
+    "id": "grouped-select",
+    "category": "select",
+    "name_zh": "分组下拉",
+    "name_en": "Select with Groups",
+    "aliases": ["Optgroup Select"],
+    "when_to_use": "选项需要按类别分组展示",
+    "prompt_en": "Build a single Grouped Select dropdown, not a full page. Structure: a trigger opening a listbox where options are grouped under non-selectable muted group headers (Frontend: React, Vue; Backend: Go, Python). Interaction: click to select, headers are inert. States: group header, option hover, selected. Motion: 150ms fade. Do not make headers selectable. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个分组下拉，不是整页。结构：触发器展开列表框，选项按不可选的灰色组头分组（前端：React、Vue；后端：Go、Python）。交互：点选项选中，组头不可点。状态：组头、选项悬停、已选。动效：150ms 淡入。组头不可被选中。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "select",
+      "placeholder": "选择语言…",
+      "groups": [
+        { "label": "前端", "options": ["React", "Vue", "Angular"] },
+        { "label": "后端", "options": ["Go", "Python", "Java"] }
+      ]
+    }
+  },
+  {
+    "id": "prefix-select",
+    "category": "select",
+    "name_zh": "带前缀下拉",
+    "name_en": "Select with Prefix Icon",
+    "aliases": [],
+    "when_to_use": "表单里需要图标提示字段含义",
+    "prompt_en": "Build a single Select with Prefix Icon, not a full page. Structure: the trigger contains a small leading glyph (globe) before the placeholder text and a chevron at the right. Interaction: standard select open/select. States: default, open, selected, disabled. Motion: 150ms fade. Do not place the icon outside the trigger box. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个带前缀图标的下拉，不是整页。结构：触发器内占位文字前有小图标（地球），右侧有箭头。交互：标准下拉展开/选择。状态：默认、展开、已选、禁用。动效：150ms 淡入。图标不要放在触发框外面。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "select", "placeholder": "选择语言", "prefix": "🌐", "options": ["简体中文", "English", "日本語"] }
+  },
+  {
+    "id": "small-select",
+    "category": "select",
+    "name_zh": "迷你下拉",
+    "name_en": "Compact Select",
+    "aliases": ["Small Select"],
+    "when_to_use": "工具栏/表格行内的小尺寸下拉",
+    "prompt_en": "Build a single Compact Select, not a full page. Structure: a small-height (28px) select trigger with 12px text, chevron tight to the edge, and a compact menu. Interaction: standard select behavior. States: default, open, selected. Motion: 150ms fade. Do not use a full-size trigger. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个迷你下拉，不是整页。结构：矮高度（28px）的下拉触发器，12px 文字，箭头贴边，菜单同样紧凑。交互：标准下拉行为。状态：默认、展开、已选。动效：150ms 淡入。不要用全尺寸触发器。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "select", "placeholder": "10 条/页", "size": "small", "options": ["10 条/页", "20 条/页", "50 条/页"] }
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "primary-button",
+    "category": "button",
+    "name_zh": "主要按钮",
+    "name_en": "Primary Button",
+    "aliases": ["Filled Button"],
+    "when_to_use": "页面上最重要的一个动作，如提交/保存",
+    "prompt_en": "Build a single Primary Button, not a full page. Structure: one filled accent-colored rounded button labeled Save. Interaction: click triggers a brief pressed state. States: default, hover (slightly brighter), active (pressed), disabled, loading (spinner replaces label). Motion: 120ms background transition. Do not use outline or ghost styles — it must be filled. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个主要按钮，不是整页。结构：一个强调色填充的圆角按钮，文字为 Save。交互：点击有短暂按压反馈。状态：默认、悬停（略亮）、按下、禁用、加载中（spinner 替代文字）。动效：120ms 背景过渡。不要用描边或幽灵样式——必须是填充式。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "primary", "label": "Save" }
+  },
+  {
+    "id": "secondary-button",
+    "category": "button",
+    "name_zh": "次要按钮",
+    "name_en": "Secondary Button",
+    "aliases": ["Outline Button"],
+    "when_to_use": "与主按钮并排的次级动作，如取消",
+    "prompt_en": "Build a single Secondary (outline) Button, not a full page. Structure: one transparent button with a 1px border labeled Cancel, meant to sit next to a primary button. Interaction: click gives pressed feedback. States: default, hover (surface tint), active, disabled. Motion: 120ms background transition. Do not fill it with the accent color. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个次要描边按钮，不是整页。结构：透明底、1px 边框、文字 Cancel 的按钮，用于与主按钮并排。交互：点击有按压反馈。状态：默认、悬停（表面着色）、按下、禁用。动效：120ms 背景过渡。不要用强调色填充。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "secondary", "label": "Cancel" }
+  },
+  {
+    "id": "dashed-button",
+    "category": "button",
+    "name_zh": "虚线按钮",
+    "name_en": "Dashed Button",
+    "aliases": ["Add Button"],
+    "when_to_use": "占位添加动作，如「添加一项」",
+    "prompt_en": "Build a single Dashed Button, not a full page. Structure: a button with a dashed border and a plus glyph followed by Add, full width of a small block. Interaction: click gives pressed feedback. States: default, hover (dashed border turns accent), active, disabled. Motion: 120ms border-color transition. Do not use a solid border. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个虚线按钮，不是整页。结构：虚线边框按钮，内容为加号与文字 Add，占满一个小块的宽度。交互：点击有按压反馈。状态：默认、悬停（虚线变强调色）、按下、禁用。动效：120ms 边框色过渡。不要用实线边框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "dashed", "label": "Add" }
+  },
+  {
+    "id": "text-button",
+    "category": "button",
+    "name_zh": "文字按钮",
+    "name_en": "Text Button",
+    "aliases": ["Ghost Button", "Link Button"],
+    "when_to_use": "低强调动作，如表格行内操作",
+    "prompt_en": "Build a single Text (ghost) Button, not a full page. Structure: borderless, background-less text button labeled View details with accent-colored text. Interaction: click gives pressed feedback. States: default, hover (soft background tint appears), active, disabled. Motion: 120ms background fade. Do not add a border or filled background in the default state. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个文字按钮，不是整页。结构：无边框无底色、强调色文字 View details 的按钮。交互：点击有按压反馈。状态：默认、悬停（出现淡淡底色）、按下、禁用。动效：120ms 背景淡入。默认态不要边框或填充背景。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "text", "label": "View details" }
+  },
+  {
+    "id": "danger-button",
+    "category": "button",
+    "name_zh": "危险按钮",
+    "name_en": "Danger Button",
+    "aliases": ["Delete Button"],
+    "when_to_use": "删除等不可逆操作",
+    "prompt_en": "Build a single Danger Button, not a full page. Structure: one filled red/danger rounded button labeled Delete. Interaction: click gives pressed feedback. States: default, hover (darker), active, disabled. Motion: 120ms background transition. Do not use the accent color — use the danger color. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个危险按钮，不是整页。结构：危险色（红）填充的圆角按钮，文字 Delete。交互：点击有按压反馈。状态：默认、悬停（加深）、按下、禁用。动效：120ms 背景过渡。不要用强调色——必须用危险色。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "danger", "label": "Delete" }
+  },
+  {
+    "id": "icon-button",
+    "category": "button",
+    "name_zh": "图标按钮",
+    "name_en": "Icon Button",
+    "aliases": [],
+    "when_to_use": "只有图标的空间紧凑操作，如刷新",
+    "prompt_en": "Build a single Icon Button, not a full page. Structure: a square button containing only a refresh glyph (SVG or text glyph) with an aria-label. Interaction: click gives pressed feedback, hover shows a small title tooltip. States: default, hover (surface tint), active, disabled. Motion: 120ms transition, icon may rotate 180 degrees on click. Do not add text inside the button. If a design system exists, map colors to its tokens but keep this structure. No emoji characters, use SVG or text glyphs.",
+    "prompt_zh": "做一个图标按钮，不是整页。结构：方形按钮，内只有一个刷新符号（SVG 或字形），带 aria-label。交互：点击有按压反馈，悬停显示小 tooltip。状态：默认、悬停（表面着色）、按下、禁用。动效：120ms 过渡，点击时图标可旋转 180 度。按钮内不要加文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要用 emoji 字符，用 SVG 或字形。",
+    "demo": { "type": "button", "variant": "icon", "label": "⟳", "ariaLabel": "刷新" }
+  },
+  {
+    "id": "loading-button",
+    "category": "button",
+    "name_zh": "加载按钮",
+    "name_en": "Loading Button",
+    "aliases": [],
+    "when_to_use": "提交后等待期间防止重复点击",
+    "prompt_en": "Build a single Loading Button, not a full page. Structure: an accent-filled button labeled Submit; clicking toggles it into a loading state with an inline spinner and disabled pointer. Interaction: click to start loading, click again to reset. States: idle, loading (spinner + label, pointer-events blocked), success flash optional. Motion: spinner rotates continuously. Do not remove the label while loading. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个加载按钮，不是整页。结构：强调色填充按钮 Submit，点击后进入加载态：内嵌 spinner 且禁止点击。交互：点击进入加载，再次点击复位。状态：空闲、加载中（spinner + 文字，禁点）、成功闪示（可选）。动效：spinner 持续旋转。加载中不要移除文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "loading", "label": "Submit" }
+  },
+  {
+    "id": "button-group",
+    "category": "button",
+    "name_zh": "按钮组",
+    "name_en": "Button Group",
+    "aliases": ["Segmented Buttons"],
+    "when_to_use": "一组相关紧凑动作共用一个容器",
+    "prompt_en": "Build a single Button Group, not a full page. Structure: three buttons (Day, Week, Month) joined into one rounded container with shared 1px borders and no gaps; the selected one is filled with accent. Interaction: click to switch selection. States: selected, unselected, hover. Motion: 120ms background transition. Do not use three separate buttons with gaps. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个按钮组，不是整页。结构：Day、Week、Month 三个按钮拼进一个圆角容器，共享 1px 边框无间隙，选中项强调色填充。交互：点击切换选中。状态：选中、未选中、悬停。动效：120ms 背景过渡。不要用三个带间隙的独立按钮。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "group", "options": ["Day", "Week", "Month"], "defaultValue": "Week" }
+  },
+  {
+    "id": "split-button",
+    "category": "button",
+    "name_zh": "分裂按钮",
+    "name_en": "Split Button",
+    "aliases": ["Dropdown Button"],
+    "when_to_use": "主动作 + 相关备选动作",
+    "prompt_en": "Build a single Split Button, not a full page. Structure: two attached segments — left a filled primary action labeled Save, right a small chevron segment that opens a dropdown of alternate actions (Save as copy, Export). Interaction: click left performs action feedback, click right opens the menu, click outside closes. States: default, hover, menu open. Motion: 150ms menu fade. Do not use two detached buttons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个分裂按钮，不是整页。结构：两段相连——左侧填充主动作 Save，右侧小箭头段点开下拉（Save as copy、Export）。交互：点左段给动作反馈，点右段开菜单，点外关闭。状态：默认、悬停、菜单展开。动效：菜单 150ms 淡入。不要用两个分离的按钮。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "split", "label": "Save", "menu": ["Save as copy", "Export"] }
+  },
+  {
+    "id": "fab",
+    "category": "button",
+    "name_zh": "悬浮按钮",
+    "name_en": "Floating Action Button",
+    "aliases": ["FAB"],
+    "when_to_use": "悬浮在角落的最高频动作，如新建",
+    "prompt_en": "Build a single Floating Action Button, not a full page. Structure: a circular accent-filled button with a plus glyph, floating with a visible drop shadow, positioned in the corner of a small demo area. Interaction: click gives pressed feedback with a scale bump. States: default, hover (shadow grows), active (scale 0.95), disabled. Motion: 150ms shadow and scale transition. Do not make it a rectangle. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个悬浮操作按钮，不是整页。结构：强调色圆形按钮，内为加号，带明显投影，悬浮在小演示区角落。交互：点击有按压缩放反馈。状态：默认、悬停（阴影变大）、按下（缩至 0.95）、禁用。动效：150ms 阴影与缩放过渡。不要做成矩形。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "button", "variant": "fab", "label": "+" }
+  }
+]

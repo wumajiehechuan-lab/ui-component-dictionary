@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Coding UI 组件词典</title>
+    <script>
+      // 防闪烁：React 挂载前先设好主题
+      (function () {
+        try {
+          // URL 参数优先（?theme=dark / ?theme=light），其次 localStorage，再次系统偏好
+          var q = new URLSearchParams(location.search).get('theme');
+          var t = localStorage.getItem('ucid-theme');
+          if (q === 'dark' || q === 'light') t = q;
+          if (!t) {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = t;
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

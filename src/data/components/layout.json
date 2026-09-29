@@ -1,0 +1,90 @@
+[
+  {
+    "id": "grid-layout",
+    "category": "layout",
+    "name_zh": "栅格布局",
+    "name_en": "Grid Layout",
+    "aliases": ["Column Grid"],
+    "when_to_use": "等宽多列内容排布",
+    "prompt_en": "Build a single Grid Layout demo, not a full page. Structure: a container of six equal blocks in a responsive grid (3 columns on wide, 2 on medium, 1 on narrow), each block a numbered placeholder with distinct soft tints. Interaction: resize handles nothing—show responsiveness via a width slider that narrows the container. States: 3/2/1 column breakpoints. Motion: 200ms column reflow. Do not use fixed pixel columns. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个栅格布局演示，不是整页。结构：容器内六个等宽占位块组成响应式网格（宽 3 列、中 2 列、窄 1 列），每块为编号占位配不同淡色。交互：用一个宽度滑杆收窄容器来展示响应式。状态：3/2/1 列断点。动效：200ms 列重排。不要用固定像素列。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "grid", "blocks": 6 }
+  },
+  {
+    "id": "split-pane",
+    "category": "layout",
+    "name_zh": "分割面板",
+    "name_en": "Split Pane",
+    "aliases": ["Resizable Split"],
+    "when_to_use": "左右/上下可拖拽分割的内容区",
+    "prompt_en": "Build a single Split Pane, not a full page. Structure: a container split into left (sidebar placeholder) and right (content placeholder) by a draggable vertical divider with a grip dot. Interaction: drag the divider to resize (min 20% each side), double-click resets to 30/70. States: default, dragging (divider highlighted), resized. Motion: live drag tracking, 150ms reset. Do not use a static divider. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个分割面板，不是整页。结构：容器被带握点的纵向分隔条分成左（侧栏占位）右（内容占位）。交互：拖动分隔条调整比例（两侧最小 20%），双击恢复 30/70。状态：默认、拖动中（分隔条高亮）、已调整。动效：实时跟手，150ms 重置。不要用静态分隔条。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "split", "left": "侧栏", "right": "内容" }
+  },
+  {
+    "id": "stack-layout",
+    "category": "layout",
+    "name_zh": "垂直堆叠",
+    "name_en": "Stack",
+    "aliases": ["VStack"],
+    "when_to_use": "纵向排列与间距控制",
+    "prompt_en": "Build a single Stack layout demo, not a full page. Structure: four placeholder rows stacked vertically with a control row to adjust gap (small/medium/large) and alignment (start/center/end). Interaction: segmented controls change gap and alignment live. States: per gap/alignment combination. Motion: 150ms layout transition. Do not use margins instead of a gap token. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个垂直堆叠布局演示，不是整页。结构：四个占位行纵向堆叠，上方控制行可调间距（小/中/大）与对齐（起始/居中/结束）。交互：分段控件实时改变间距与对齐。状态：各间距/对齐组合。动效：150ms 布局过渡。不要用 margin 代替 gap。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "stack", "blocks": 4 }
+  },
+  {
+    "id": "holy-grail-layout",
+    "category": "layout",
+    "name_zh": "圣杯布局",
+    "name_en": "Holy Grail Layout",
+    "aliases": ["Header-Footer Layout"],
+    "when_to_use": "头/脚/两侧栏/主区经典结构",
+    "prompt_en": "Build a single Holy Grail Layout demo, not a full page. Structure: a fixed-height frame with top header bar, left and right sidebars, a center main area, and a bottom footer — each a labeled placeholder. Interaction: a toggle collapses the sidebars (main expands). States: with sidebars, sidebars collapsed. Motion: 200ms width transition. Do not use floats — use modern flex/grid. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个圣杯布局演示，不是整页。结构：固定高度框架：顶栏、左右侧栏、中央主区、底栏，各为带标签占位。交互：开关收起两侧栏（主区扩展）。状态：带侧栏、侧栏收起。动效：200ms 宽度过渡。不要用 float——用现代 flex/grid。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "holy-grail" }
+  },
+  {
+    "id": "masonry-layout",
+    "category": "layout",
+    "name_zh": "瀑布流布局",
+    "name_en": "Masonry Layout",
+    "aliases": ["Pinterest Grid"],
+    "when_to_use": "不等高卡片的多列流式排布",
+    "prompt_en": "Build a single Masonry Layout demo, not a full page. Structure: three columns of placeholder cards with varying heights flowing to fill vertical space. Interaction: a shuffle button redistributes card heights. States: default, shuffled. Motion: 250ms position transitions where supported. Do not use equal heights. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个瀑布流布局演示，不是整页。结构：三列不同高度的占位卡片，按纵向空间填充流动。交互：洗牌按钮重新分配卡片高度。状态：默认、洗牌后。动效：支持处 250ms 位置过渡。不要等高。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "masonry", "cards": 8 }
+  },
+  {
+    "id": "centered-card-layout",
+    "category": "layout",
+    "name_zh": "居中卡片布局",
+    "name_en": "Centered Layout",
+    "aliases": ["Auth Layout"],
+    "when_to_use": "登录/引导页的居中焦点",
+    "prompt_en": "Build a single Centered Layout demo, not a full page. Structure: a full-area frame with one centered card placeholder (max-width 360px) and a subtle page background tint; content vertically and horizontally centered. Interaction: none beyond hover. States: default. Motion: none. Do not add page chrome like navbars. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个居中卡片布局演示，不是整页。结构：整个区域内一张居中卡片占位（最大宽 360px）+ 淡淡页面底色，内容水平垂直都居中。交互：仅悬停。状态：默认。动效：无。不要加导航栏等页面装饰。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "centered", "label": "登录卡片" }
+  },
+  {
+    "id": "sticky-header-layout",
+    "category": "layout",
+    "name_zh": "粘性头部布局",
+    "name_en": "Sticky Header Layout",
+    "aliases": [],
+    "when_to_use": "滚动时头部固定、内容滚动",
+    "prompt_en": "Build a single Sticky Header demo, not a full page. Structure: a fixed-height scrollable frame whose header bar stays pinned at top while content scrolls beneath; the header gains a shadow after scrolling starts. Interaction: scroll the frame to see the pinned header and shadow. States: at top (no shadow), scrolled (shadow + border). Motion: 120ms shadow fade. Do not scroll the whole page. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个粘性头部演示，不是整页。结构：固定高度可滚动框，头部栏钉在顶部、内容在其下滚动；开始滚动后头部出现阴影。交互：滚动框体观察钉住头部与阴影。状态：顶部（无阴影）、已滚动（阴影 + 边框）。动效：120ms 阴影淡入。不要滚动整个页面。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "sticky-header" }
+  },
+  {
+    "id": "responsive-collapse-layout",
+    "category": "layout",
+    "name_zh": "响应式收起布局",
+    "name_en": "Responsive Collapse",
+    "aliases": ["Adaptive Layout"],
+    "when_to_use": "窄屏下侧栏变抽屉",
+    "prompt_en": "Build a single Responsive Collapse demo, not a full page. Structure: a frame with a sidebar and content; a width slider narrows the frame past a breakpoint where the sidebar hides behind a hamburger that opens it as an overlay drawer. Interaction: drag slider across the breakpoint, use hamburger to open/close the drawer form. States: wide (sidebar inline), narrow (hamburger), drawer open. Motion: 200ms drawer slide. Do not simply hide the sidebar without the drawer fallback. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个响应式收起布局演示，不是整页。结构：框架含侧栏与内容；宽度滑杆把框架收窄跨过断点后，侧栏藏进汉堡按钮，点开变成覆盖抽屉。交互：拖滑杆跨断点，用汉堡开关抽屉形态。状态：宽（侧栏内联）、窄（汉堡）、抽屉展开。动效：200ms 抽屉滑入。不要只隐藏侧栏而没有抽屉兜底。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "layout-demo", "variant": "responsive-collapse" }
+  }
+]

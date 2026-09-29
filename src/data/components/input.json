@@ -1,0 +1,118 @@
+[
+  {
+    "id": "otp-input",
+    "category": "input",
+    "name_zh": "验证码输入",
+    "name_en": "OTP Input",
+    "aliases": ["One-time Code Input"],
+    "when_to_use": "六位验证码分格输入，自动跳格",
+    "prompt_en": "Build a six-digit OTP Input, not a full page. Structure: six separate single-character boxes. Interaction: type a digit advances focus; backspace goes back; paste fills all. States: empty, filled, error. Do not use one normal text field. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做成六位验证码框，每输一字自动跳格下一格，退格回上格，粘贴可填满；不要用一个普通文本框。若项目已有设计系统，颜色取自 token，结构和交互保持不变，不要重置外观，不要 emoji。",
+    "demo": {
+      "type": "otp",
+      "length": 6
+    }
+  },
+  {
+    "id": "tag-input",
+    "category": "input",
+    "name_zh": "标签输入",
+    "name_en": "Tag Input",
+    "aliases": ["Tokens Input"],
+    "when_to_use": "输入后回车变成标签，逐个可删",
+    "prompt_en": "Build a single Tag Input, not a full page. Structure: a bordered input box where typed text becomes a tag chip on Enter; chips sit inline before the caret with a remove × each; a plain text input continues after the last chip. Interaction: Enter or comma commits a tag, Backspace on empty input removes the last tag, click × removes that tag. States: empty (placeholder), with tags, focused border, duplicate input rejected with brief shake or message. Motion: 120ms chip appear. Do not use a dropdown select — there are no preset options. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个标签输入框，不是整页。结构：带边框的输入框，输入文字按 Enter 变成标签 chip；chip 排在输入光标前，每个带删除 ×；最后一个 chip 后继续输入。交互：Enter 或逗号提交标签，空输入时按 Backspace 删最后一个标签，点 × 删除对应标签。状态：空（占位符）、有标签、聚焦边框、重复输入被拒绝（轻微抖动或提示）。动效：chip 120ms 出现。不要用下拉选择——没有预设选项。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tag-input",
+      "placeholder": "输入标签后回车…",
+      "defaultValue": ["前端", "教程"]
+    }
+  },
+  {
+    "id": "chip-input",
+    "category": "input",
+    "name_zh": "芯片输入",
+    "name_en": "Chip Input",
+    "aliases": ["Chips Field"],
+    "when_to_use": "与标签输入同形，chip 风格更强调可选建议",
+    "prompt_en": "Build a single Chip Input, not a full page. Structure: a field where values render as rounded chips (slightly more pill-like and colorful than plain tags), plus a small suggestion row of preset chips below that add on click. Interaction: type and Enter adds a chip, click a suggestion adds it, × removes a chip, Backspace removes the last. States: empty, filled, focused, suggestion hover. Motion: 120ms chip appear. Do not use a multi-select dropdown — suggestions are one-click shortcuts, not a listbox. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个芯片输入框，不是整页。结构：输入值渲染为圆角 chip（比普通标签更胶囊化、更彩色一点），下方一行预设建议 chip，点击即添加。交互：输入回车加 chip，点建议添加，点 × 删除，Backspace 删最后一个。状态：空、已填、聚焦、建议悬停。动效：chip 120ms 出现。不要做多选下拉——建议只是一键快捷方式，不是列表框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "chip-input",
+      "placeholder": "添加收件人…",
+      "defaultValue": ["dev@example.com"],
+      "suggestions": ["qa@example.com", "design@example.com", "pm@example.com"]
+    }
+  },
+  {
+    "id": "mentions-input",
+    "category": "input",
+    "name_zh": "提及输入",
+    "name_en": "Mentions Input",
+    "aliases": ["@ Mentions"],
+    "when_to_use": "输入 @ 弹出人员建议并插入可高亮提及",
+    "prompt_en": "Build a single Mentions Input, not a full page. Structure: a multi-line textarea-like field; typing @ opens a small popover listing 4-5 people; choosing one inserts a highlighted mention token inline. Interaction: @ triggers the popover, arrow keys navigate, Enter or click inserts, Esc closes, Backspace deletes a whole mention token at once. States: plain typing, popover open, mention token (accent-tinted, non-editable as text). Motion: popover 120ms fade. Do not use a plain textarea without mention handling, and do not use a separate people dropdown outside the text flow. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个提及输入框，不是整页。结构：多行文本域样式；输入 @ 弹出小气泡列出 4-5 个人名；选中后在文本中插入高亮的提及 token。交互：@ 触发气泡，方向键导航，Enter 或点击插入，Esc 关闭，Backspace 一次删除整个提及 token。状态：普通输入、气泡展开、提及 token（强调色着色，不可当普通文字编辑）。动效：气泡 120ms 淡入。不要用无提及处理的纯文本域，也不要用文本流之外的人员下拉。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "mentions",
+      "placeholder": "输入 @ 提及成员…",
+      "people": ["Alice", "Bob", "Carol", "David", "Erin"]
+    }
+  },
+  {
+    "id": "rich-text-editor",
+    "category": "input",
+    "name_zh": "富文本编辑器",
+    "name_en": "Rich Text Editor",
+    "aliases": ["WYSIWYG Editor"],
+    "when_to_use": "带格式工具栏的所见即所得编辑",
+    "prompt_en": "Build a single Rich Text Editor, not a full page. Structure: a toolbar row (bold, italic, bulleted list) above a contenteditable area with two sample paragraphs. Interaction: select text and click toolbar buttons to apply bold/italic/list, buttons reflect the state at the caret. States: toolbar button default/active, editor focus border. Motion: none required. Do not build a full page layout or add extra toolbar features beyond the three. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个富文本编辑器，不是整页。结构：一行工具栏（加粗、斜体、无序列表）加一个可编辑内容区（含两段示例文字）。交互：选中文字点工具栏按钮应用加粗/斜体/列表，按钮随光标处状态高亮。状态：工具栏按钮默认/激活、编辑区聚焦边框。动效：可无。不要做成整页布局，工具栏也不要超出这三个功能。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "rich-text",
+      "initialHtml": "<p>选中文字试试加粗与斜体。</p><p>这是一个演示段落。</p>"
+    }
+  },
+  {
+    "id": "markdown-editor",
+    "category": "input",
+    "name_zh": "Markdown 编辑器",
+    "name_en": "Markdown Editor",
+    "aliases": [],
+    "when_to_use": "左写 Markdown 右出预览",
+    "prompt_en": "Build a single Markdown Editor, not a full page. Structure: a two-pane layout — left a plain textarea for Markdown source with a sample heading, bold text and a list; right a live preview pane rendering headings, bold, lists and code spans. Interaction: typing on the left re-renders the preview instantly. States: pane focus borders, (optional) synced scroll not required. Motion: none. Do not use an external Markdown library — implement minimal parsing for headings, bold, lists and inline code. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个 Markdown 编辑器，不是整页。结构：双栏——左侧纯文本域写 Markdown 源码（含示例标题、加粗、列表），右侧实时预览渲染标题、加粗、列表和行内代码。交互：左侧输入即时更新右侧预览。状态：两栏聚焦边框（可选同步滚动，不强求）。动效：无。不要用外部 Markdown 库——自行实现标题、加粗、列表、行内代码的最小解析。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "markdown",
+      "initialText": "# 标题\n\n这是 **加粗** 文字。\n\n- 列表项一\n- 列表项二\n\n行内代码：`code`"
+    }
+  },
+  {
+    "id": "code-editor",
+    "category": "input",
+    "name_zh": "代码编辑器",
+    "name_en": "Code Editor",
+    "aliases": [],
+    "when_to_use": "等宽字体加行号的代码输入区",
+    "prompt_en": "Build a single Code Editor (lightweight), not a full page. Structure: an editor surface with a line-number gutter on the left and a monospaced textarea on the right, pre-filled with a few short lines of code. Interaction: typing updates line numbers as lines wrap or break; tab key inserts two spaces. States: focus border, (optional) current-line highlight not required. Motion: none. Do not use CodeMirror/Monaco or syntax highlighting libraries — a flat single-color textarea is fine. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个轻量代码编辑器，不是整页。结构：左侧行号栏 + 右侧等宽字体文本域，预填几行短代码。交互：输入时行号随换行增减；Tab 键插入两个空格。状态：聚焦边框（可选当前行高亮，不强求）。动效：无。不要用 CodeMirror/Monaco 或语法高亮库——单色文本域即可。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "code-editor",
+      "initialCode": "function greet(name) {\n  return `Hello, ${name}!`\n}\n\ngreet('world')"
+    }
+  },
+  {
+    "id": "inline-edit",
+    "category": "input",
+    "name_zh": "行内编辑",
+    "name_en": "Inline Edit",
+    "aliases": ["Edit-in-place"],
+    "when_to_use": "点击文本就地变输入框，确认后保存",
+    "prompt_en": "Build a single Inline Edit (edit-in-place) field, not a full page. Structure: a text value displayed as plain text with a subtle pencil affordance on hover; clicking swaps it for a same-size input with confirm/cancel buttons. Interaction: click to edit, Enter or ✓ saves, Esc or ✕ cancels and reverts, blur saves. States: display, hover (dashed underline), editing, saving briefly (optional). Motion: 120ms swap. Do not open a modal or navigate away — editing must happen in place. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个行内编辑字段，不是整页。结构：平时显示纯文本，悬停出现轻微的铅笔暗示；点击后就地换成同尺寸输入框，带确认/取消按钮。交互：点击进入编辑，Enter 或 ✓ 保存，Esc 或 ✕ 取消还原，失焦保存。状态：展示、悬停（虚线下划线）、编辑中、短暂保存中（可选）。动效：120ms 切换。不要弹模态框或跳转页面——必须就地编辑。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "inline-edit",
+      "initialValue": "我的项目名称"
+    }
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ai-chat-input",
+    "category": "saas",
+    "name_zh": "AI 对话输入框",
+    "name_en": "AI Chat Input",
+    "aliases": ["Prompt Box"],
+    "when_to_use": "AI 应用的消息输入与发送",
+    "prompt_en": "Build a single AI Chat Input, not a full page. Structure: a rounded multi-line auto-growing input with a model chip (GPT-5) at bottom-left, an attach icon and a circular send button at bottom-right. Interaction: typing grows the box to 4 lines max, Enter sends and clears, send disabled when empty. States: empty (send muted), typing, sending (button becomes stop square). Motion: 150ms height grow. Do not use a plain single-line input. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个 AI 对话输入框，不是整页。结构：圆角多行自适应输入框，左下模型小片（GPT-5），右下附件图标与圆形发送按钮。交互：输入增高最多 4 行，Enter 发送并清空，空内容时发送禁用。状态：空（发送置灰）、输入中、发送中（按钮变停止方块）。动效：150ms 高度增长。不要用单行输入。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "chat-input", "model": "GPT-5" }
+  },
+  {
+    "id": "chat-bubble",
+    "category": "saas",
+    "name_zh": "聊天气泡",
+    "name_en": "Chat Bubble",
+    "aliases": ["Message Bubble"],
+    "when_to_use": "对话消息的左右气泡布局",
+    "prompt_en": "Build a single Chat Bubble pair, not a full page. Structure: a user bubble right-aligned (accent fill) and an AI bubble left-aligned (surface fill with a small avatar), each with a timestamp; one AI bubble carries two small action glyphs (copy, regenerate). Interaction: copy glyph flashes 已复制. States: user, ai, hover actions. Motion: 120ms action fade. Do not use full-width bubbles. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一对聊天气泡，不是整页。结构：右对齐用户气泡（强调色填充）+ 左对齐 AI 气泡（表面色填充带小头像），各带时间戳；AI 气泡带复制与重新生成两个小操作符号。交互：复制符号闪示「已复制」。状态：用户、AI、悬停操作。动效：120ms 操作淡入。不要用全宽气泡。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "chat-bubble" }
+  },
+  {
+    "id": "prompt-template-card",
+    "category": "saas",
+    "name_zh": "提示词模板卡",
+    "name_en": "Prompt Template Card",
+    "aliases": [],
+    "when_to_use": "提示词市场/库的卡片",
+    "prompt_en": "Build a single Prompt Template Card, not a full page. Structure: a compact card with a category chip (写作), title, two-line prompt preview in code style, usage count, and a 使用 button. Interaction: hover reveals a copy icon overlay on the preview; click 使用 flashes. States: default, hover, copied flash. Motion: 150ms overlay fade. Do not show the full prompt text. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个提示词模板卡，不是整页。结构：紧凑卡片：分类小片（写作）、标题、两行代码风格的提示词预览、使用次数、使用按钮。交互：悬停在预览上浮现复制图标；点使用闪示。状态：默认、悬停、已复制闪示。动效：150ms 浮层淡入。不要展示完整提示词。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "prompt-card", "category": "写作", "title": "小红书爆款标题", "preview": "请为「{{主题}}」生成 5 个…", "uses": "2.3k" }
+  },
+  {
+    "id": "model-selector",
+    "category": "saas",
+    "name_zh": "模型选择器",
+    "name_en": "Model Selector",
+    "aliases": [],
+    "when_to_use": "切换 AI 模型的下拉",
+    "prompt_en": "Build a single Model Selector, not a full page. Structure: a compact dropdown showing the current model with a provider dot; the menu lists four models each with name, a capability tag (vision/code) and a speed meter of three bars. Interaction: select updates the trigger; disabled model shows 已配额用尽. States: open, selected, disabled item, hover. Motion: 150ms fade. Do not show pricing. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个模型选择器，不是整页。结构：紧凑下拉显示当前模型与厂商圆点；菜单列四个模型，各含名称、能力标签（视觉/代码）和三格速度条。交互：选择后更新触发器；禁用模型显示「配额用尽」。状态：展开、已选、禁用项、悬停。动效：150ms 淡入。不要显示价格。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "saas-demo",
+      "variant": "model-selector",
+      "models": [
+        { "name": "GLM-5", "tag": "全能", "speed": 3 },
+        { "name": "GLM-5-Flash", "tag": "极速", "speed": 3 },
+        { "name": "GLM-4V", "tag": "视觉", "speed": 2 },
+        { "name": "Code-X", "tag": "代码", "speed": 1, "disabled": true }
+      ]
+    }
+  },
+  {
+    "id": "citation-block",
+    "category": "saas",
+    "name_zh": "引用来源块",
+    "name_en": "Citation Block",
+    "aliases": ["Sources"],
+    "when_to_use": "AI 回答附引用来源",
+    "prompt_en": "Build a single Citation Block, not a full page. Structure: an AI answer line ending with superscript citation numbers [1][2], and beneath it a row of two small source chips (favicon dot, site name, page title truncated). Interaction: hovering a chip raises a mini preview card with the quoted sentence. States: default, hover preview, inline citations. Motion: 150ms preview fade. Do not use full URLs. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个引用来源块，不是整页。结构：AI 回答行末带上标引用编号 [1][2]，下方一排两个来源小片（站点圆点、站名、截断的页面标题）。交互：悬停小片浮出迷你预览卡显示被引句子。状态：默认、悬停预览、行内引用。动效：150ms 预览淡入。不要显示完整 URL。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "citation", "sources": [["workbuddy.cn", "WorkBuddy 文档 · 组件词典"], ["react.dev", "React 官方文档 · 状态管理"]] }
+  },
+  {
+    "id": "token-meter",
+    "category": "saas",
+    "name_zh": "Token 用量表",
+    "name_en": "Token Meter",
+    "aliases": ["Usage Meter"],
+    "when_to_use": "API/套餐用量的可视化",
+    "prompt_en": "Build a single Token Meter, not a full page. Structure: a panel with title 本月用量, a segmented stacked bar (输入 tokens, 输出 tokens, 剩余) with a legend, and a numeric readout 1.2M / 2.0M. Interaction: hovering a segment shows its exact value tooltip. States: segments, hover, near-limit warning tint on remaining. Motion: segments grow 300ms on mount. Do not use a pie chart. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个 Token 用量表，不是整页。结构：面板：标题「本月用量」、分段堆叠条（输入 tokens、输出 tokens、剩余）带图例、读数 1.2M / 2.0M。交互：悬停分段显示精确值 tooltip。状态：分段、悬停、剩余量告警着色。动效：挂载时分段 300ms 生长。不要用饼图。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "token-meter", "used": 60, "segments": [["输入", 35], ["输出", 25]] }
+  },
+  {
+    "id": "agent-status-card",
+    "category": "saas",
+    "name_zh": "智能体状态卡",
+    "name_en": "Agent Status Card",
+    "aliases": ["Agent Run Card"],
+    "when_to_use": "Agent 执行过程的实时状态",
+    "prompt_en": "Build a single Agent Status Card, not a full page. Structure: a card with agent name (研究员), a step list where steps light up in sequence (检索资料 → 交叉验证 → 生成报告), the active step shows a spinner, and an elapsed-time chip ticks. Interaction: a Stop button halts the sequence mid-way. States: pending steps, active step (spinner), done steps (check), stopped. Motion: step lighting 400ms each. Do not show raw logs. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个智能体状态卡，不是整页。结构：卡片含智能体名（研究员）、依次点亮的步骤列表（检索资料 → 交叉验证 → 生成报告），当前步骤显示 spinner，耗时小片跳动。交互：Stop 按钮在中途停止序列。状态：待执行步骤、进行中（spinner）、已完成（勾）、已停止。动效：每步 400ms 点亮。不要显示原始日志。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "agent-status", "steps": ["检索资料", "交叉验证", "生成报告"] }
+  },
+  {
+    "id": "code-diff",
+    "category": "saas",
+    "name_zh": "代码差异块",
+    "name_en": "Code Diff",
+    "aliases": ["Diff Viewer"],
+    "when_to_use": "展示 AI 修改前后的代码差异",
+    "prompt_en": "Build a single Code Diff block, not a full page. Structure: a monospace panel with six lines where one line has a red removed background (− prefix) and one has a green added background (+ prefix); a header shows file.js +1 −1. Interaction: none beyond scroll. States: context, removed, added, header. Motion: none. Do not use a diff library. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个代码差异块，不是整页。结构：等宽面板六行，其中一行红色删除背景（− 前缀）、一行绿色新增背景（+ 前缀）；头部显示 file.js +1 −1。交互：除滚动外无。状态：上下文、删除、新增、头部。动效：无。不要用 diff 库。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "saas-demo",
+      "variant": "code-diff",
+      "lines": [
+        { "type": "context", "text": "function greet(name) {" },
+        { "type": "removed", "text": "  return 'Hello, ' + name" },
+        { "type": "added", "text": "  return `Hello, ${name}!`" },
+        { "type": "context", "text": "}" }
+      ]
+    }
+  },
+  {
+    "id": "thinking-indicator",
+    "category": "saas",
+    "name_zh": "思考过程指示",
+    "name_en": "Thinking Indicator",
+    "aliases": ["Reasoning Trace"],
+    "when_to_use": "AI 深度思考的可折叠过程展示",
+    "prompt_en": "Build a single Thinking Indicator, not a full page. Structure: a collapsible bar labeled 思考中… with shimmering text and a chevron; expanded it shows three one-line reasoning steps fading in sequentially. Interaction: click toggles collapse; the shimmer stops when done and label becomes 已完成思考. States: thinking, expanded, done, collapsed. Motion: 200ms expand, shimmer 1.5s loop. Do not show a spinner circle. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个思考过程指示，不是整页。结构：可折叠条「思考中…」文字带微光 + 箭头；展开后三行推理步骤依次淡入。交互：点击折叠/展开；完成后微光停止，标签变「已完成思考」。状态：思考中、展开、完成、收起。动效：200ms 展开，微光 1.5s 循环。不要用圆形 spinner。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "thinking", "steps": ["拆解问题为两个子任务", "检索相关组件模式", "组织回答结构"] }
+  },
+  {
+    "id": "suggestion-chips",
+    "category": "saas",
+    "name_zh": "追问建议 chips",
+    "name_en": "Follow-up Suggestions",
+    "aliases": ["Prompt Suggestions"],
+    "when_to_use": "AI 回答后的追问引导",
+    "prompt_en": "Build a single Follow-up Suggestions row, not a full page. Structure: beneath a truncated answer line, three suggestion chips with a spark glyph (帮我细化第二点 / 换个角度解释 / 生成示例). Interaction: hover tints a chip, click marks it selected and disables the others. States: default, hover, selected, disabled siblings. Motion: 120ms transitions. Do not stack chips vertically. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一行追问建议，不是整页。结构：截断的回答行下方三个带星形符号的建议 chip（帮我细化第二点 / 换个角度解释 / 生成示例）。交互：悬停着色，点击选中并禁用其他。状态：默认、悬停、选中、兄弟禁用。动效：120ms 过渡。不要竖排堆叠。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "suggestions", "chips": ["帮我细化第二点", "换个角度解释", "生成示例"] }
+  },
+  {
+    "id": "workspace-invite",
+    "category": "saas",
+    "name_zh": "协作邀请条",
+    "name_en": "Invite Bar",
+    "aliases": ["Team Invite"],
+    "when_to_use": "邀请成员加入协作空间",
+    "prompt_en": "Build a single Invite Bar, not a full page. Structure: an email input with a role dropdown (成员/管理员) and an 邀请 button; below, two pending-invite rows with email, role chip and 撤回 link. Interaction: inviting appends a row with a brief 'sent' flash, 撤回 removes it. States: idle, sent flash, pending rows, revoked. Motion: 150ms row slide-in. Do not use a modal. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个协作邀请条，不是整页。结构：邮箱输入框 + 角色下拉（成员/管理员）+ 邀请按钮；下方两行待接受邀请（邮箱、角色小片、撤回链接）。交互：邀请后追加一行并闪示「已发送」，撤回移除该行。状态：空闲、已发送闪示、待接受行、已撤回。动效：150ms 行滑入。不要用模态。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "invite", "pending": [["afu@example.com", "成员"], ["ming@example.com", "管理员"]] }
+  },
+  {
+    "id": "usage-quota-card",
+    "category": "saas",
+    "name_zh": "套餐配额卡",
+    "name_en": "Quota Card",
+    "aliases": ["Plan Usage"],
+    "when_to_use": "套餐用量与升级引导",
+    "prompt_en": "Build a single Quota Card, not a full page. Structure: a card with plan name (免费版), two usage rows with thin progress bars (项目 3/3 full and warning-tinted, 存储 420MB/2GB), and an 升级 Pro button. Interaction: hover a bar shows exact value; button flashes. States: normal row, full row (warning), hover, clicked. Motion: bars fill on mount. Do not show billing dates. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个套餐配额卡，不是整页。结构：卡片含方案名（免费版）、两行用量细进度条（项目 3/3 已满且告警着色、存储 420MB/2GB）、升级 Pro 按钮。交互：悬停进度条显示精确值；按钮点击闪示。状态：普通行、已满行（告警）、悬停、已点击。动效：挂载时进度条填充。不要显示账单日期。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "saas-demo", "variant": "quota", "rows": [["项目", 100, "3 / 3"], ["存储", 21, "420MB / 2GB"]] }
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "media-card",
+    "category": "card",
+    "name_zh": "图文卡片",
+    "name_en": "Media Card",
+    "aliases": ["Article Card"],
+    "when_to_use": "封面图 + 标题 + 摘要的内容卡片",
+    "prompt_en": "Build a single Media Card, not a full page. Structure: a card with a top image area (gradient placeholder), a title line, a two-line muted excerpt, and a footer row (author + date). Interaction: hover lifts the card (shadow + translateY) and the title tints accent. States: default, hover, pressed. Motion: 150ms lift transition. Do not add buttons — the whole card is clickable. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个图文卡片，不是整页。结构：卡片顶部图片区（渐变占位）、标题、两行灰色摘要、底部行（作者 + 日期）。交互：悬停抬卡（阴影 + 上移）且标题变强调色。状态：默认、悬停、按下。动效：150ms 抬起过渡。不要加按钮——整卡可点。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "media", "title": "构建可维护的前端组件", "excerpt": "从命名到状态管理，一套可复用的实践方法。", "meta": "四喜 · 2026-09-28" }
+  },
+  {
+    "id": "profile-card",
+    "category": "card",
+    "name_zh": "个人资料卡",
+    "name_en": "Profile Card",
+    "aliases": ["User Card"],
+    "when_to_use": "展示用户头像与关键信息",
+    "prompt_en": "Build a single Profile Card, not a full page. Structure: a centered avatar circle (monogram), name, one-line role in muted text, a Follow button, and a row of three mini stats (posts/followers/following). Interaction: Follow toggles to Following with style change, stats are static. States: default, follow toggled, hover lift. Motion: 150ms button transition. Do not add social icons row. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个个人资料卡，不是整页。结构：居中头像圆（字母占位）、姓名、一行灰色角色、Follow 按钮、三列小统计（帖子/粉丝/关注）。交互：Follow 点击切换为 Following 且样式变化，统计静态。状态：默认、已关注、悬停抬卡。动效：150ms 按钮过渡。不要加社交图标行。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "profile", "name": "四喜", "role": "独立开发者", "stats": ["帖子 128", "粉丝 3.2k", "关注 96"] }
+  },
+  {
+    "id": "stat-card",
+    "category": "card",
+    "name_zh": "指标卡",
+    "name_en": "Stat Card",
+    "aliases": ["KPI Card"],
+    "when_to_use": "仪表盘里单个关键指标",
+    "prompt_en": "Build a single Stat Card, not a full page. Structure: a label (总用户), a large numeric value, a delta chip (+12.4% in green or red by convention) and a small sparkline-like bar row at the bottom. Interaction: hover shows a tooltip on the delta chip. States: default, hover, positive delta, negative delta. Motion: value counts up once on mount. Do not add a chart library. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个指标卡，不是整页。结构：标签（总用户）、大数字值、涨跌小片（按惯例涨绿跌红相反则遵循项目惯例）和底部一排迷你柱状示意。交互：悬停时涨跌片显示 tooltip。状态：默认、悬停、正向、负向。动效：数值挂载时滚动到位。不要引入图表库。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "stat", "label": "总用户", "value": "28,431", "delta": "+12.4%", "bars": [8, 12, 9, 14, 16, 13, 18] }
+  },
+  {
+    "id": "pricing-card",
+    "category": "card",
+    "name_zh": "价格卡",
+    "name_en": "Pricing Card",
+    "aliases": ["Plan Card"],
+    "when_to_use": "订阅方案展示",
+    "prompt_en": "Build a single Pricing Card, not a full page. Structure: plan name (Pro), a large price with period, a four-item feature list with check glyphs, and a full-width Choose button; a small ribbon 标记 Most popular. Interaction: hover lift; Choose flashes pressed. States: default, hover, highlighted (accent border for popular). Motion: 150ms lift. Do not add a billing toggle. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个价格卡，不是整页。结构：方案名（Pro）、带周期的价格大字、四项特性列表（打勾符号）、全宽 Choose 按钮、角上「最受欢迎」小丝带。交互：悬停抬卡；Choose 有按压反馈。状态：默认、悬停、高亮（热门用强调色边框）。动效：150ms 抬起。不要加月/年切换。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "pricing", "plan": "Pro", "price": "¥49/月", "features": ["无限项目", "10 名成员", "优先支持", "高级报表"], "popular": true }
+  },
+  {
+    "id": "action-card",
+    "category": "card",
+    "name_zh": "操作卡片",
+    "name_en": "Action Card",
+    "aliases": [],
+    "when_to_use": "带主操作的引导卡",
+    "prompt_en": "Build a single Action Card, not a full page. Structure: an icon block, title (连接你的数据库), one-line description, and a primary button. Interaction: button click shows a brief loading then a done check in place. States: default, loading, done, hover lift. Motion: 150ms transitions. Do not add a dismiss ×. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个操作卡片，不是整页。结构：图标块、标题（连接你的数据库）、一行描述、主按钮。交互：按钮点击显示短暂加载后就地变为完成勾。状态：默认、加载中、完成、悬停抬卡。动效：150ms 过渡。不要加关闭 ×。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "action", "title": "连接你的数据库", "desc": "只需一步，即可开始同步数据。", "button": "立即连接" }
+  },
+  {
+    "id": "expandable-card",
+    "category": "card",
+    "name_zh": "可展开卡片",
+    "name_en": "Expandable Card",
+    "aliases": [],
+    "when_to_use": "卡片默认收起，点击展开详情",
+    "prompt_en": "Build a single Expandable Card, not a full page. Structure: a collapsed row (title + chevron); clicking expands in place to reveal a details area with two lines of text and a link, chevron rotates. Interaction: click header toggles expand/collapse. States: collapsed, expanded, hover. Motion: 200ms height expand. Do not use an overlay — expansion is inline. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个可展开卡片，不是整页。结构：收起行（标题 + 箭头），点击后就地展开详情区（两行文字 + 一个链接），箭头旋转。交互：点头部切换展开/收起。状态：收起、展开、悬停。动效：200ms 高度展开。不要用浮层——展开是内联的。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "expandable", "title": "什么是结构化提示词？", "detail": "按名称、变体、结构、交互、状态、动效组织描述，模型理解更稳定。" }
+  },
+  {
+    "id": "product-card",
+    "category": "card",
+    "name_zh": "商品卡片",
+    "name_en": "Product Card",
+    "aliases": [],
+    "when_to_use": "电商商品展示与加购",
+    "prompt_en": "Build a single Product Card, not a full page. Structure: square image placeholder (gradient), product name, price in accent, an original price struck through, and a small add-to-cart icon button at bottom right. Interaction: hover shows a quick-add overlay on the image, clicking the cart icon bumps a badge count. States: default, hover, added flash. Motion: 150ms overlay slide-up. Do not add rating stars. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个商品卡片，不是整页。结构：方形图片占位（渐变）、商品名、强调色价格、划线原价、右下角小的加购图标按钮。交互：悬停时图片上出现快速加购浮层，点购物车图标角标数字 +1。状态：默认、悬停、加购闪示。动效：浮层 150ms 上滑。不要加评分星。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "product", "name": "无线机械键盘", "price": "¥399", "origin": "¥499" }
+  },
+  {
+    "id": "hover-card-demo",
+    "category": "card",
+    "name_zh": "悬停信息卡",
+    "name_en": "Hover Card",
+    "aliases": ["Peek Card"],
+    "when_to_use": "悬停用户名时浮出资料卡",
+    "prompt_en": "Build a single Hover Card trigger, not a full page. Structure: a text trigger (@sixi); hovering it (after 200ms delay) floats a small profile card above with avatar, name, bio, and a Follow button. Interaction: hover opens with delay, moving to the card keeps it open, leaving closes. States: trigger hover, card open, follow toggled. Motion: 150ms fade + 4px rise. Do not open on click only. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个悬停信息卡触发，不是整页。结构：文本触发（@sixi），悬停 200ms 后上方浮出小资料卡：头像、姓名、简介、Follow 按钮。交互：悬停延时打开，移到卡片上保持，移开关闭。状态：触发悬停、卡片展开、已关注。动效：150ms 淡入 + 上浮 4px。不要只支持点击打开。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "hover-card", "handle": "@sixi", "name": "四喜", "bio": "独立开发者，正在做家庭教育工具。" }
+  },
+  {
+    "id": "login-card",
+    "category": "card",
+    "name_zh": "登录卡片",
+    "name_en": "Login Card",
+    "aliases": ["Auth Card"],
+    "when_to_use": "居中的登录表单卡",
+    "prompt_en": "Build a single Login Card, not a full page. Structure: a centered card with welcome title, email and password fields, a primary Sign in button, and a muted 'forgot password' link. Interaction: fields accept typing, button shows a loading then error hint if password is empty. States: empty, filled, loading, validation error. Motion: 150ms error hint fade. Do not add third-party login icons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个登录卡片，不是整页。结构：居中卡片：欢迎标题、邮箱与密码输入框、主按钮 Sign in、灰色「忘记密码」链接。交互：字段可输入，密码为空时点击按钮显示加载后给错误提示。状态：空、已填、加载中、校验错误。动效：错误提示 150ms 淡入。不要加第三方登录图标。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "login", "title": "欢迎回来" }
+  },
+  {
+    "id": "kanban-card",
+    "category": "card",
+    "name_zh": "看板卡片",
+    "name_en": "Kanban Card",
+    "aliases": ["Task Card"],
+    "when_to_use": "看板中的单条任务卡",
+    "prompt_en": "Build a single Kanban Card, not a full page. Structure: a compact card with a colored type stripe on the left, task title, two small member dots, and a due-date chip. Interaction: draggable within the demo area to reorder against a second static card. States: default, dragging (lifted shadow), drop gap. Motion: cards nudge apart 150ms. Do not include columns — only cards. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个看板卡片，不是整页。结构：紧凑卡片：左侧彩色类型条、任务标题、两个小成员圆点、截止日期小片。交互：在演示区内可拖动，与另一张静态卡重排。状态：默认、拖动中（阴影抬起）、落点间隙。动效：卡片 150ms 让位。不要包含列——只有卡片。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "card-demo", "variant": "kanban", "title": "完成组件词典首期", "due": "09-30", "members": ["四", "喜"] }
+  }
+]

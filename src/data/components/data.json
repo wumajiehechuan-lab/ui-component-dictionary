@@ -1,0 +1,190 @@
+[
+  {
+    "id": "data-table",
+    "category": "data",
+    "name_zh": "数据表格",
+    "name_en": "Data Table",
+    "aliases": ["Table"],
+    "when_to_use": "结构化数据的行列展示",
+    "prompt_en": "Build a single Data Table, not a full page. Structure: a four-column table (name, size, status, date) with a header row, five data rows, zebra or divider styling, and one row selected. Interaction: click a row to select (single), hover highlights rows, header click flashes sort direction on one column. States: header, row hover, row selected, status chip per row. Motion: 100ms row highlight. Do not add pagination. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个数据表格，不是整页。结构：四列表格（名称、大小、状态、日期），表头行 + 五行数据，斑马或分隔线样式，一行处于选中态。交互：点行单选，悬停高亮，点一次表头闪示某列排序方向。状态：表头、行悬停、行选中、每行状态小片。动效：100ms 行高亮。不要加分页。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "table",
+      "columns": ["名称", "大小", "状态", "日期"],
+      "rows": [
+        ["组件词典.html", "128 KB", "已同步", "09-28"],
+        ["需求文档.md", "42 KB", "已同步", "09-27"],
+        ["设计稿.png", "2.1 MB", "上传中", "09-27"],
+        ["数据集.csv", "18.9 MB", "失败", "09-26"],
+        ["README.md", "4 KB", "已同步", "09-26"]
+      ],
+      "selectedRow": 0
+    }
+  },
+  {
+    "id": "timeline",
+    "category": "data",
+    "name_zh": "时间线",
+    "name_en": "Timeline",
+    "aliases": ["Activity Feed"],
+    "when_to_use": "按时间顺序展示事件流",
+    "prompt_en": "Build a single Timeline, not a full page. Structure: a vertical line with four event nodes, each node a dot (latest accent-colored) with a title, one-line description and timestamp. Interaction: hover a node highlights its block. States: latest node, past nodes, hover. Motion: none required. Do not make it horizontally scrollable. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个时间线，不是整页。结构：纵向轴线带四个事件节点，每节点为圆点（最新为强调色）+ 标题、一行描述和时间戳。交互：悬停节点高亮其块。状态：最新节点、历史节点、悬停。动效：可无。不要做成横向滚动。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "timeline",
+      "events": [
+        ["发布 v1.0", "全量 212 个组件上线", "今天 12:00"],
+        ["完成 Tabs 分类", "12 个变体齐备", "昨天 18:30"],
+        ["数据层重构", "按分类拆分 JSON", "09-26"],
+        ["项目启动", "需求文档定稿", "09-28"]
+      ]
+    }
+  },
+  {
+    "id": "stat-group",
+    "category": "data",
+    "name_zh": "指标组",
+    "name_en": "Stat Group",
+    "aliases": ["KPI Row"],
+    "when_to_use": "一排关键数字概览",
+    "prompt_en": "Build a single Stat Group row, not a full page. Structure: three inline stats separated by dividers, each with a muted label, a bold number, and a small delta arrow. Interaction: hover lifts each stat slightly. States: default, hover, positive/negative delta. Motion: 120ms hover lift. Do not use cards with borders — keep them inline. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个指标组行，不是整页。结构：三个并排指标用分隔线隔开，每个为灰标签 + 加粗数字 + 小涨跌箭头。交互：悬停时轻微上浮。状态：默认、悬停、正/负涨跌。动效：120ms 悬停上浮。不要用带边框的卡片——保持内联。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "stats",
+      "stats": [
+        { "label": "组件", "value": "212", "delta": "+186" },
+        { "label": "分类", "value": "26", "delta": "0" },
+        { "label": "提示词", "value": "424", "delta": "+372" }
+      ]
+    }
+  },
+  {
+    "id": "descriptions-list",
+    "category": "data",
+    "name_zh": "描述列表",
+    "name_en": "Descriptions List",
+    "aliases": ["Key-Value Panel"],
+    "when_to_use": "详情页的字段对展示",
+    "prompt_en": "Build a single Descriptions List, not a full page. Structure: a bordered panel with label/value pairs arranged in two columns, labels muted and right-aligned. Interaction: hover a row tints it slightly. States: default, hover. Motion: none. Do not use a table element — use a definition-style layout. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个描述列表，不是整页。结构：带边框面板，标签/值对按两列排布，标签灰色右对齐。交互：悬停行轻微着色。状态：默认、悬停。动效：无。不要用 table 元素——用定义式布局。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "descriptions",
+      "items": [["版本", "v1.0.0"], ["许可证", "MIT"], ["运行时", "React 18"], ["构建", "Vite 5"], ["状态", "已发布"], ["更新时间", "09-28"]]
+    }
+  },
+  {
+    "id": "rank-list",
+    "category": "data",
+    "name_zh": "排行榜",
+    "name_en": "Ranking List",
+    "aliases": ["Leaderboard"],
+    "when_to_use": "带名次与热度的排行",
+    "prompt_en": "Build a single Ranking List, not a full page. Structure: five rows each with a rank number (top three accent-colored), a name, a thin progress bar showing share, and a value. Interaction: hover highlights a row. States: top-3 rank styled, normal rank, hover. Motion: bars animate to width on mount. Do not add medal icons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个排行榜，不是整页。结构：五行，每行名次数字（前三强调色）、名称、细占比进度条、数值。交互：悬停高亮该行。状态：前三名样式、普通名次、悬停。动效：进度条挂载时动画到宽度。不要用奖牌图标。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "ranking",
+      "rows": [
+        ["Underlined Tabs", 96],
+        ["Select", 88],
+        ["Combobox", 74],
+        ["Date Picker", 61],
+        ["OTP Input", 47]
+      ]
+    }
+  },
+  {
+    "id": "bar-chart-demo",
+    "category": "data",
+    "name_zh": "迷你柱状图",
+    "name_en": "Mini Bar Chart",
+    "aliases": [],
+    "when_to_use": "无图表库的轻量柱状对比",
+    "prompt_en": "Build a single Mini Bar Chart, not a full page. Structure: seven vertical bars from data with weekday labels below, the tallest bar accent-colored, others muted; a value tooltip shows on hover. Interaction: hover a bar shows its value above it. States: default, hover, max highlighted. Motion: bars grow from bottom on mount, 300ms. Do not use a chart library. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个迷你柱状图，不是整页。结构：按数据画七根纵向柱，下方星期标签，最高柱强调色其余灰色；悬停显示数值。交互：悬停柱上方浮出数值。状态：默认、悬停、最大值高亮。动效：挂载时柱子自底部生长 300ms。不要用图表库。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "data-demo", "variant": "bar-chart", "data": [12, 18, 9, 22, 15, 8, 19], "labels": ["一", "二", "三", "四", "五", "六", "日"] }
+  },
+  {
+    "id": "code-block",
+    "category": "data",
+    "name_zh": "代码块",
+    "name_en": "Code Block",
+    "aliases": ["Snippet"],
+    "when_to_use": "只读代码展示与复制",
+    "prompt_en": "Build a single Code Block, not a full page. Structure: a dark-surface panel with a header row (language label + copy button) and four lines of pre-formatted code. Interaction: copy button writes the code and flashes 已复制. States: default, copied. Motion: 120ms copied feedback. Do not add syntax highlighting libraries — single-color code is fine. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个代码块，不是整页。结构：深色面板：头部行（语言标签 + 复制按钮）+ 四行预格式化代码。交互：复制按钮写入剪贴板并闪示「已复制」。状态：默认、已复制。动效：120ms 反馈。不要用语法高亮库——单色代码即可。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "code-block",
+      "lang": "bash",
+      "code": "npm install\nnpm run dev\nnpm run build\nnpm run preview"
+    }
+  },
+  {
+    "id": "progress-list",
+    "category": "data",
+    "name_zh": "进度列表",
+    "name_en": "Progress List",
+    "aliases": ["Storage Breakdown"],
+    "when_to_use": "多项占比/进度的纵向列表",
+    "prompt_en": "Build a single Progress List, not a full page. Structure: four rows each with a label, a thin progress bar and a percentage; one row in danger color (nearly full). Interaction: hover shows exact value tooltip. States: normal bars, warning bar, hover. Motion: bars fill 400ms on mount. Do not use a donut chart. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个进度列表，不是整页。结构：四行，每行为标签 + 细进度条 + 百分比；一行接近满时用危险色。交互：悬停显示精确值 tooltip。状态：普通条、告警条、悬停。动效：挂载时 400ms 填充。不要用环形图。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "data-demo",
+      "variant": "progress-list",
+      "rows": [
+        ["组件数据", 92],
+        ["演示渲染器", 78],
+        ["测试覆盖", 45],
+        ["文档", 30]
+      ]
+    }
+  },
+  {
+    "id": "avatar-group",
+    "category": "data",
+    "name_zh": "头像组",
+    "name_en": "Avatar Group",
+    "aliases": ["Stacked Avatars"],
+    "when_to_use": "成员列表的堆叠头像展示",
+    "prompt_en": "Build a single Avatar Group, not a full page. Structure: four overlapping circular monogram avatars with white rings, plus a final +N circle; hovering an avatar raises it slightly. Interaction: hover raises individual avatar, click flashes selection. States: stacked default, hover raised, overflow +N. Motion: 120ms raise. Do not use image assets — monograms are fine. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个头像组，不是整页。结构：四个堆叠重叠的圆形字母头像带白描边，末尾一个 +N 圆；悬停时单个头像轻微上浮。交互：悬停上浮单个头像，点击闪示选中。状态：堆叠默认、悬停上浮、溢出 +N。动效：120ms 上浮。不要用图片资源——字母即可。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "data-demo", "variant": "avatar-group", "avatars": ["四", "喜", "阿", "福"], "overflow": 6 }
+  },
+  {
+    "id": "tree-list",
+    "category": "data",
+    "name_zh": "层级列表",
+    "name_en": "Tree List",
+    "aliases": ["Nested List"],
+    "when_to_use": "文件目录等层级数据展示",
+    "prompt_en": "Build a single Tree List (read-only), not a full page. Structure: an indented list of three levels with carets for expand/collapse and file/folder glyphs, one leaf highlighted. Interaction: click carets to expand/collapse branches. States: expanded, collapsed, leaf hover, highlighted leaf. Motion: 150ms branch expand. Do not add checkboxes — it is read-only. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个层级列表（只读），不是整页。结构：三级缩进列表，带展开/收起箭头与文件/文件夹符号，一个叶子高亮。交互：点箭头展开/收起分支。状态：展开、收起、叶子悬停、叶子高亮。动效：150ms 分支展开。不要加勾选框——这是只读的。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "file",
+      "nodes": [
+        { "label": "src", "children": [
+          { "label": "components", "children": [{ "label": "Card.jsx" }, { "label": "Header.jsx" }] },
+          { "label": "styles", "children": [{ "label": "tokens.css" }] },
+          { "label": "main.jsx" }
+        ] }
+      ]
+    }
+  },
+  {
+    "id": "badge-list",
+    "category": "data",
+    "name_zh": "状态徽章组",
+    "name_en": "Status Badge Group",
+    "aliases": [],
+    "when_to_use": "一组状态标签的图例展示",
+    "prompt_en": "Build a single Status Badge Group, not a full page. Structure: a wrap row of five badges (成功, 处理中, 已排队, 失败, 已跳过) each with a leading status dot in semantic colors. Interaction: hover lifts each badge slightly. States: per-badge semantic color, hover. Motion: none. Do not make them interactive filters. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个状态徽章组，不是整页。结构：一行可换行的五个徽章（成功、处理中、已排队、失败、已跳过），每个带语义色状态圆点。交互：悬停轻微上浮。状态：各自语义色、悬停。动效：无。不要做成可交互筛选器。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "tag-demo", "variant": "status-group", "tags": ["成功", "处理中", "已排队", "失败", "已跳过"] }
+  }
+]

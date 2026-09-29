@@ -1,0 +1,112 @@
+[
+  {
+    "id": "modal-dialog",
+    "category": "overlay",
+    "name_zh": "模态对话框",
+    "name_en": "Modal Dialog",
+    "aliases": ["Dialog"],
+    "when_to_use": "打断式确认或表单弹窗",
+    "prompt_en": "Build a single Modal Dialog, not a full page. Structure: a trigger button; clicking opens a centered dialog (title, body line, Cancel + OK buttons) over a dim scrim. Interaction: OK/Cancel/scrim/Esc all close, focus is trapped in the dialog while open. States: closed, open, scrim, button hover. Motion: 200ms scale-in + scrim fade. Do not allow scrolling the page behind. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个模态对话框，不是整页。结构：触发按钮，点击后居中弹窗（标题、正文一行、取消与确定按钮）覆盖暗色遮罩。交互：确定/取消/遮罩/Esc 均关闭，展开时焦点困在弹窗内。状态：关闭、打开、遮罩、按钮悬停。动效：200ms 缩放进入 + 遮罩淡入。打开时禁止背后页面滚动。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "modal", "title": "确认删除", "body": "删除后不可恢复，确定继续吗？" }
+  },
+  {
+    "id": "drawer-panel",
+    "category": "overlay",
+    "name_zh": "侧滑抽屉",
+    "name_en": "Drawer",
+    "aliases": ["Side Panel"],
+    "when_to_use": "右侧滑出的详情/表单面板",
+    "prompt_en": "Build a single right-side Drawer, not a full page. Structure: a trigger button; clicking slides in a 280px panel from the right over a scrim, containing a header with × and a few placeholder rows. Interaction: × / scrim / Esc close; sliding uses transform. States: closed, open, closing. Motion: 250ms slide-in, scrim fade. Do not push the underlying content. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个右侧抽屉，不是整页。结构：触发按钮，点击后 280px 面板从右侧滑入并带遮罩，内含带头部 × 和几行占位内容。交互：× / 遮罩 / Esc 关闭；滑动用 transform。状态：关闭、打开、关闭中。动效：250ms 滑入，遮罩淡入。不要推挤底层内容。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "drawer", "title": "详情面板" }
+  },
+  {
+    "id": "popover",
+    "category": "overlay",
+    "name_zh": "气泡卡片",
+    "name_en": "Popover",
+    "aliases": [],
+    "when_to_use": "点击触发的轻量浮层内容",
+    "prompt_en": "Build a single Popover, not a full page. Structure: a trigger button; clicking opens a small anchored card above it with a title, one line of text and an arrow pointing at the trigger. Interaction: click toggles, outside click closes, position flips below if near top edge. States: closed, open above, open below (flipped). Motion: 150ms fade + 4px slide. Do not use a modal scrim. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个气泡卡片，不是整页。结构：触发按钮，点击后在其上方弹出小锚定卡片：标题、一行文字、指向触发器的箭头。交互：点击切换，点外关闭，靠近顶部时自动翻转到下方。状态：关闭、上方展开、下方展开（翻转）。动效：150ms 淡入 + 4px 滑动。不要用模态遮罩。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "popover", "title": "小提示", "body": "提示词复制后直接粘贴给 AI 即可。" }
+  },
+  {
+    "id": "tooltip",
+    "category": "overlay",
+    "name_zh": "文字提示",
+    "name_en": "Tooltip",
+    "aliases": [],
+    "when_to_use": "悬停显示的简短说明",
+    "prompt_en": "Build a single Tooltip, not a full page. Structure: an icon button that shows a tiny dark bubble (single line) above it after a 300ms hover delay. Interaction: hover opens with delay, mouseleave closes, focus opens for keyboard users. States: hidden, visible, delay pending. Motion: 100ms fade. Do not make it clickable or dismissible by click. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个文字提示，不是整页。结构：一个图标按钮，悬停 300ms 后上方显示单行深色小气泡。交互：悬停延时打开，移出关闭，键盘聚焦时也打开。状态：隐藏、可见、延迟等待。动效：100ms 淡入。不要让它可点击或点击关闭。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "tooltip", "tip": "复制英文提示词" }
+  },
+  {
+    "id": "confirm-dialog",
+    "category": "overlay",
+    "name_zh": "确认气泡",
+    "name_en": "Popconfirm",
+    "aliases": ["Confirm Popover"],
+    "when_to_use": "删除前的轻量二次确认",
+    "prompt_en": "Build a single Popconfirm, not a full page. Structure: a Delete button; clicking opens a small anchored card with a warning line and 确定 / 取消 mini buttons. Interaction: 确定 closes with a brief deleted flash on the trigger, 取消/outside closes plainly. States: closed, open, confirmed flash. Motion: 150ms fade. Do not use a full modal for this. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个确认气泡，不是整页。结构：删除按钮，点击弹出小锚定卡片：警示文字 + 确定 / 取消小按钮。交互：确定后关闭并在触发器上闪示「已删除」，取消/点外普通关闭。状态：关闭、展开、已确认闪示。动效：150ms 淡入。这个场景不要用整模态。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "popconfirm", "text": "确定删除这条记录？" }
+  },
+  {
+    "id": "image-preview",
+    "category": "overlay",
+    "name_zh": "图片预览",
+    "name_en": "Image Preview",
+    "aliases": ["Lightbox"],
+    "when_to_use": "点击缩略图放大查看",
+    "prompt_en": "Build a single Image Preview lightbox, not a full page. Structure: a small gradient thumbnail; clicking opens a fullscreen dark overlay with the enlarged image centered, a × at top-right, and prev/next arrows. Interaction: click thumbnail opens, × / overlay click closes, arrows cycle between two demo images. States: closed, open, switching. Motion: 200ms zoom-in from thumbnail position (approximate center is fine). Do not show controls in the closed state. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个图片预览灯箱，不是整页。结构：小渐变缩略图；点击后全屏深色遮罩居中放大图，右上角 ×，两侧前后箭头。交互：点缩略图打开，× / 遮罩关闭，箭头在两张演示图间切换。状态：关闭、打开、切换中。动效：200ms 从缩略图位置放大（近似居中即可）。关闭态不要显示控件。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "lightbox" }
+  },
+  {
+    "id": "bottom-sheet",
+    "category": "overlay",
+    "name_zh": "底部抽屉",
+    "name_en": "Bottom Sheet",
+    "aliases": [],
+    "when_to_use": "移动端从底部升起的操作面板",
+    "prompt_en": "Build a single Bottom Sheet, not a full page. Structure: a phone-frame demo area with a trigger; clicking slides up a rounded-top sheet covering the lower half, with a grab handle and two option rows. Interaction: trigger opens, scrim click or drag handle down closes. States: closed, half-open, closing. Motion: 250ms spring-like slide. Do not cover the whole frame. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个底部抽屉，不是整页。结构：手机框演示区带触发按钮，点击后圆角顶部的面板从底部滑入覆盖下半部，带拖拽条和两个选项行。交互：触发打开，点遮罩或下拉拖拽条关闭。状态：关闭、半开、关闭中。动效：250ms 类弹簧滑入。不要盖满整个框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "bottom-sheet", "options": ["拍照上传", "从相册选择"] }
+  },
+  {
+    "id": "fullscreen-overlay",
+    "category": "overlay",
+    "name_zh": "全屏浮层",
+    "name_en": "Fullscreen Overlay",
+    "aliases": [],
+    "when_to_use": "搜索命令面板等全屏接管场景",
+    "prompt_en": "Build a single Fullscreen Overlay, not a full page. Structure: a trigger; clicking fades in a full-area overlay with a centered search-like input at the top third and a dim backdrop, Esc or × closes. Interaction: input is autofocused on open, Esc closes, typing shows two suggestion rows. States: closed, open, with query. Motion: 150ms backdrop fade + input slide-down. Do not use a boxed modal. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个全屏浮层，不是整页。结构：触发器，点击后整个区域淡入浮层：上三分之一处居中一个搜索式输入框 + 暗背景，Esc 或 × 关闭。交互：打开时输入框自动聚焦，Esc 关闭，输入显示两行建议。状态：关闭、打开、有输入。动效：150ms 背景淡入 + 输入框下滑。不要用盒状模态。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "fullscreen" }
+  },
+  {
+    "id": "hover-flyout",
+    "category": "overlay",
+    "name_zh": "悬停浮层",
+    "name_en": "Hover Flyout",
+    "aliases": ["Mega Menu"],
+    "when_to_use": "导航项悬停展开的富内容浮层",
+    "prompt_en": "Build a single Hover Flyout, not a full page. Structure: a nav trigger labeled Products; hovering opens a wide anchored panel with two columns of links. Interaction: hover opens with 150ms delay, moving into the panel keeps it, leaving both closes. States: closed, open, link hover. Motion: 150ms fade. Do not require clicking. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个悬停浮层，不是整页。结构：导航触发器文字 Products，悬停展开宽幅锚定面板，内含两列链接。交互：悬停延时 150ms 打开，移入面板保持，两者都离开关闭。状态：关闭、展开、链接悬停。动效：150ms 淡入。不要要求点击。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "hover-flyout", "trigger": "产品", "columns": [["组件词典", "提示词库", "演示生成"], ["团队版", "私有部署", "更新日志"]] }
+  },
+  {
+    "id": "toast-stack",
+    "category": "overlay",
+    "name_zh": "浮动通知",
+    "name_en": "Toast",
+    "aliases": ["Snackbar"],
+    "when_to_use": "操作结果的轻量反馈条",
+    "prompt_en": "Build a single Toast stack, not a full page. Structure: a Show toast button; each click adds a notification bar (icon + text + close ×) stacked at the top-right of the demo area, auto-dismissing after 3s with a countdown tint. Interaction: × dismisses immediately, button adds up to three visible toasts. States: entering, visible, leaving, manual dismiss. Motion: 200ms slide-in, 200ms slide-out. Do not block interactions behind toasts. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个浮动通知堆栈，不是整页。结构：Show toast 按钮，每次点击在演示区右上堆叠一条通知（图标 + 文字 + 关闭 ×），3 秒自动消失并带倒计时着色。交互：× 立即关闭，按钮最多叠加三条可见。状态：进入、显示、离开、手动关闭。动效：200ms 滑入、200ms 滑出。通知不遮挡背后交互。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "overlay-demo", "variant": "toast", "message": "已保存到草稿箱" }
+  }
+]

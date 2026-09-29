@@ -1,0 +1,112 @@
+[
+  {
+    "id": "info-alert",
+    "category": "feedback",
+    "name_zh": "信息提示条",
+    "name_en": "Alert",
+    "aliases": ["Banner"],
+    "when_to_use": "页面内常驻的提示信息",
+    "prompt_en": "Build a single Alert banner, not a full page. Structure: a rounded banner with a leading status icon, a bold short title, one description line, and a close ×; show info, success, warning and danger variants stacked. Interaction: × dismisses that banner with a fade. States: info, success, warning, danger, dismissed. Motion: 200ms collapse on dismiss. Do not use toast behavior — these are inline. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一条信息提示条，不是整页。结构：圆角横幅：前置状态图标、加粗短标题、一行描述、关闭 ×；信息/成功/警告/危险四种变体竖排展示。交互：× 淡出移除该条。状态：信息、成功、警告、危险、已移除。动效：200ms 收起。不要做成 toast——这些是内联的。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "alert", "items": [["info", "新版本可用", "刷新页面即可更新到 v1.1。"], ["success", "已同步", "全部更改已保存到本地。"], ["warning", "存储空间不足", "请清理部分缓存文件。"], ["danger", "同步失败", "网络中断，稍后将自动重试。"]] }
+  },
+  {
+    "id": "message-toast",
+    "category": "feedback",
+    "name_zh": "全局提示",
+    "name_en": "Message",
+    "aliases": ["Global Toast"],
+    "when_to_use": "操作后的即时全局反馈",
+    "prompt_en": "Build a single global Message trigger, not a full page. Structure: three small buttons (成功 / 失败 / 加载中); clicking shows a centered top-floating slim message bar with matching icon for 2 seconds. Interaction: click a button to fire its message; messages can stack slightly offset. States: idle, success message, error message, loading message. Motion: 200ms drop-in from top, fade-out. Do not use a side stack position. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个全局提示触发组，不是整页。结构：三个小按钮（成功 / 失败 / 加载中），点击后在顶部居中悬浮一条带对应图标的细提示条，停留 2 秒。交互：点按钮触发对应提示；多条提示可轻微错位堆叠。状态：空闲、成功提示、失败提示、加载提示。动效：200ms 顶部下落进入，淡出。不要用侧边堆叠位置。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "message", "buttons": ["成功", "失败", "加载中"] }
+  },
+  {
+    "id": "result-page",
+    "category": "feedback",
+    "name_zh": "结果页",
+    "name_en": "Result",
+    "aliases": ["Status Page"],
+    "when_to_use": "操作完成/失败的整块反馈",
+    "prompt_en": "Build a single Result block, not a full page. Structure: a centered block with a large status glyph (ok check in green circle / error cross in red circle), a title (提交成功 / 提交失败), one explanation line, and a primary button. Interaction: a small toggle switches between success and error variants. States: success, error, hover button. Motion: glyph pops in 200ms. Do not use full-page layout. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个结果页块，不是整页。结构：居中块：大状态符号（绿色圆打勾 / 红色圆叉）、标题（提交成功 / 提交失败）、一行说明、主按钮。交互：一个小开关在成功/失败两种变体间切换。状态：成功、失败、按钮悬停。动效：符号 200ms 弹入。不要做成整页布局。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "result" }
+  },
+  {
+    "id": "tag-feedback",
+    "category": "feedback",
+    "name_zh": "标签式反馈",
+    "name_en": "Inline Feedback Tag",
+    "aliases": ["Validation Message"],
+    "when_to_use": "表单字段下方的校验反馈",
+    "prompt_en": "Build a single inline Validation Feedback row, not a full page. Structure: a small input labeled 用户名 with a feedback line beneath that switches between ok (green check + 可用) and error (red × + 已被占用) as you type. Interaction: typing the value 'taken' triggers error, anything else ok. States: idle, ok, error, checking spinner. Motion: 150ms feedback swap. Do not use a toast for field errors. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个行内校验反馈行，不是整页。结构：小输入框（标签 用户名）+ 下方反馈行，随输入切换 ok（绿勾 + 可用）与 error（红叉 + 已被占用）。交互：输入 taken 触发错误，其余为可用。状态：空闲、可用、错误、检查中 spinner。动效：150ms 反馈切换。字段错误不要用 toast。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "validation" }
+  },
+  {
+    "id": "rate-limit-hint",
+    "category": "feedback",
+    "name_zh": "操作频率提示",
+    "name_en": "Cooldown Hint",
+    "aliases": ["Retry Timer"],
+    "when_to_use": "发送验证码后的倒计时禁用按钮",
+    "prompt_en": "Build a single Cooldown button, not a full page. Structure: a button labeled 获取验证码; clicking starts a 10-second countdown in the label (重新获取 (8s)) while disabled. Interaction: click starts cooldown, it re-enables at zero. States: idle, counting (disabled), re-enabled. Motion: none required. Do not use a separate countdown display. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个冷却按钮，不是整页。结构：按钮文字 获取验证码；点击后进入 10 秒倒计时（标签变为 重新获取 (8s)）并禁用。交互：点击开始冷却，归零恢复可用。状态：空闲、倒计时中（禁用）、恢复可用。动效：可无。不要另设倒计时显示。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "cooldown", "seconds": 10 }
+  },
+  {
+    "id": "callout-tip",
+    "category": "feedback",
+    "name_zh": "引导提示",
+    "name_en": "Callout",
+    "aliases": ["Tip Box"],
+    "when_to_use": "文档里的提示/注意块",
+    "prompt_en": "Build a single Callout box, not a full page. Structure: a left-accent-bordered box with a bold label (提示 / 注意) and one sentence; show a tip variant (accent) and a caution variant (warning color) stacked. Interaction: none required beyond hover. States: tip, caution. Motion: none. Do not make it dismissible. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个引导提示框，不是整页。结构：左侧强调色竖边的盒子：加粗标签（提示 / 注意）+ 一句话；提示变体（强调色）与注意变体（警告色）竖排展示。交互：除悬停外无。状态：提示、注意。动效：无。不要做成可关闭。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "callout", "items": [["提示", "复制英文提示词效果最佳。"], ["注意", "删除操作不可撤销，请谨慎操作。"]] }
+  },
+  {
+    "id": "progress-feedback",
+    "category": "feedback",
+    "name_zh": "完成进度反馈",
+    "name_en": "Task Progress Feedback",
+    "aliases": [],
+    "when_to_use": "批量任务的处理进度展示",
+    "prompt_en": "Build a single batch Task Progress block, not a full page. Structure: a panel listing three files, each row with name and a status that animates in sequence (上传中 with percent → 已完成 check); a summary line updates (2/3 完成). Interaction: a Restart link replays the sequence. States: per-row uploading/done, summary counting. Motion: progress fill 800ms per row, staggered. Do not use a global single bar only. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个批量任务进度块，不是整页。结构：面板列三个文件，每行状态依次动画（上传中带百分比 → 已完成勾），摘要行同步更新（2/3 完成）。交互：Restart 链接重播整个序列。状态：每行上传中/完成、摘要计数。动效：每行进度填充 800ms，错峰进行。不要只用一条全局进度条。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "task-progress", "files": ["封面.png", "第一章.md", "配图.jpg"] }
+  },
+  {
+    "id": "empty-feedback",
+    "category": "feedback",
+    "name_zh": "操作引导反馈",
+    "name_en": "Onboarding Hint",
+    "aliases": ["Coach Mark"],
+    "when_to_use": "首次使用的功能引导",
+    "prompt_en": "Build a single Onboarding Hint, not a full page. Structure: a demo button with a floating coach bubble pointing at it (arrow), containing a tip line and a 知道了 button. Interaction: 知道了 dismisses the bubble with a fade; a Replay link brings it back. States: shown, dismissed, replayed. Motion: 200ms fade + pop. Do not block the button while shown. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个引导提示，不是整页。结构：一个演示按钮 + 指向它的悬浮引导气泡（带箭头），内含提示行和「知道了」按钮。交互：知道了淡出气泡，重播链接让它再次出现。状态：显示、已忽略、重播。动效：200ms 淡入弹出。显示时不要禁用按钮。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "coach-mark", "tip": "点击这里复制提示词" }
+  },
+  {
+    "id": "error-state-inline",
+    "category": "feedback",
+    "name_zh": "行内错误态",
+    "name_en": "Inline Error State",
+    "aliases": [],
+    "when_to_use": "区块级加载失败与重试",
+    "prompt_en": "Build a single inline Error State block, not a full page. Structure: a dashed-border panel showing a broken glyph, a 失败 title, one reason line and a 重试 button. Interaction: 重试 triggers a 1s loading spinner then returns to the error state. States: error, retrying, back-to-error. Motion: spinner rotation. Do not use a toast or modal. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个行内错误态块，不是整页。结构：虚线边框面板：断裂符号、标题「失败」、一行原因、重试按钮。交互：重试触发 1 秒 loading spinner 后回到错误态。状态：错误、重试中、回到错误。动效：spinner 旋转。不要用 toast 或模态。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "inline-error", "reason": "网络连接中断" }
+  },
+  {
+    "id": "undo-feedback",
+    "category": "feedback",
+    "name_zh": "可撤销反馈",
+    "name_en": "Undo Feedback",
+    "aliases": [],
+    "when_to_use": "删除后短暂窗口内可撤销",
+    "prompt_en": "Build a single Undo feedback bar, not a full page. Structure: a demo list row with a 删除 action; deleting removes the row and shows a bottom bar (已删除 · 撤销) with a 5s shrinking time-line. Interaction: 撤销 restores the row instantly, timeout finalizes the deletion. States: row present, deleted (bar visible), restored, finalized. Motion: bar slides up 200ms, time-line shrinks linearly. Do not use a modal confirm. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个可撤销反馈条，不是整页。结构：演示列表行带删除动作；删除后行消失并出现底部条（已删除 · 撤销），带 5 秒收缩的时间线。交互：撤销立即恢复行，超时后删除生效。状态：行在、已删除（条可见）、已恢复、已生效。动效：条 200ms 上滑，时间线线性收缩。不要用模态确认。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "feedback-demo", "variant": "undo", "item": "草稿：九月的复盘" }
+  }
+]

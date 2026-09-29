@@ -1,0 +1,94 @@
+[
+  {
+    "id": "rating-stars",
+    "category": "special",
+    "name_zh": "星级评分",
+    "name_en": "Rating Stars",
+    "aliases": ["Star Rating"],
+    "when_to_use": "打分场景，支持半星或整数星",
+    "prompt_en": "Build a single Rating Stars input, not a full page. Structure: a row of five star glyphs with a numeric readout; filled stars up to the rating. Interaction: hover previews the would-be rating, click sets it, click the same value again clears it. States: empty, hover preview, set, read-only, half-star optional. Motion: 120ms fill transition. Do not use a dropdown of numbers. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个星级评分输入，不是整页。结构：五个星形符号一行 + 数字读数，评分内的星填充。交互：悬停预览、点击设定、再点同值清除。状态：空、悬停预览、已设定、只读、半星可选。动效：120ms 填充过渡。不要用数字下拉代替。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "rating", "max": 5, "defaultValue": 3 }
+  },
+  {
+    "id": "color-picker",
+    "category": "special",
+    "name_zh": "取色器",
+    "name_en": "Color Picker",
+    "aliases": ["Color Swatches"],
+    "when_to_use": "选主题色/标签色的场景",
+    "prompt_en": "Build a single compact Color Picker, not a full page. Structure: a trigger swatch showing the current color; opening reveals a preset swatch grid (8-12 colors) plus a hex readout. Interaction: click a swatch to select and close; the trigger updates. States: closed, open, swatch hover, selected (ring), trigger filled. Motion: 150ms panel fade. Do not build a full saturation-value canvas. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个紧凑取色器，不是整页。结构：触发色块显示当前颜色，展开后为 8-12 个预设色块网格 + 十六进制读数。交互：点色块选中并关闭，触发块同步更新。状态：收起、展开、色块悬停、已选（描环）、触发块填充。动效：面板 150ms 淡入。不要做完整的饱和度-明度画布。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "color-picker",
+      "colors": ["#ef4444", "#f97316", "#eab308", "#22c55e", "#14b8a6", "#3b82f6", "#8b5cf6", "#ec4899"],
+      "defaultValue": "#3b82f6"
+    }
+  },
+  {
+    "id": "search-input",
+    "category": "special",
+    "name_zh": "搜索输入框",
+    "name_en": "Search Input",
+    "aliases": ["Search Bar"],
+    "when_to_use": "带放大镜图标与清空按钮的搜索入口",
+    "prompt_en": "Build a single Search Input, not a full page. Structure: a rounded input with a magnifier glyph at the left inside the field and a clear × at the right when text exists. Interaction: typing shows the clear button, clicking clear empties and refocuses, Enter triggers a brief searching state. States: empty, typing, cleared focus, searching pulse optional. Motion: 120ms clear-button fade. Do not use a separate submit button. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个搜索输入框，不是整页。结构：圆角输入框，字段内左侧放大镜符号，有文字时右侧出现清空 ×。交互：输入时显示清空按钮，点清空后清空并重新聚焦，Enter 触发短暂搜索中状态。状态：空、输入中、清空后聚焦、搜索中脉冲（可选）。动效：清空按钮 120ms 淡入。不要外加提交按钮。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "search-input", "placeholder": "搜索…" }
+  },
+  {
+    "id": "phone-input",
+    "category": "special",
+    "name_zh": "手机号输入",
+    "name_en": "Phone Input",
+    "aliases": [],
+    "when_to_use": "带区号选择与格式校验的手机号录入",
+    "prompt_en": "Build a single Phone Input, not a full page. Structure: a compact country-code dropdown (+86 etc.) attached to the left of a numeric input, digits auto-grouped as 3-4-4. Interaction: typing formats digits with spaces, invalid characters rejected, a validity hint line below turns ok or error. States: empty, typing formatted, invalid (danger hint), valid (ok hint). Motion: 120ms hint fade. Do not use three separate boxes for segments. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个手机号输入，不是整页。结构：紧凑区号下拉（+86 等）贴在数字输入框左侧，数字按 3-4-4 自动分组。交互：输入自动加空格分组、拒绝非法字符、下方校验提示行切换 ok/错误。状态：空、格式化输入中、无效（红色提示）、有效（绿色提示）。动效：提示 120ms 淡入。不要拆成三个格子。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "phone-input", "codes": ["+86", "+852", "+81", "+1"] }
+  },
+  {
+    "id": "amount-input",
+    "category": "special",
+    "name_zh": "金额输入框",
+    "name_en": "Amount Input",
+    "aliases": ["Currency Input"],
+    "when_to_use": "带货币符号与千分位的金额录入",
+    "prompt_en": "Build a single Amount Input, not a full page. Structure: an input with a ¥ prefix inside the left edge and thousands separators as you type, two decimal places enforced on blur. Interaction: typing groups digits with commas, blur formats to 2 decimals, invalid text rejected. States: empty, typing, formatted blur, error. Motion: none required. Do not add a currency dropdown. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个金额输入框，不是整页。结构：输入框左缘内置 ¥ 前缀，输入时千分位逗号分组，失焦强制两位小数。交互：输入逗号分组、失焦格式化两位小数、拒绝非法文本。状态：空、输入中、失焦格式化、错误。动效：可无。不要加货币下拉。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "amount-input", "prefix": "¥", "placeholder": "0.00" }
+  },
+  {
+    "id": "signature-pad",
+    "category": "special",
+    "name_zh": "签名板",
+    "name_en": "Signature Pad",
+    "aliases": [],
+    "when_to_use": "手写签名采集",
+    "prompt_en": "Build a single Signature Pad, not a full page. Structure: a bordered canvas area with a baseline hint and two small buttons Clear / Done under it. Interaction: pointer drag draws a smooth ink line, Clear wipes the canvas, Done flashes a saved state. States: empty canvas, drawing, has-ink (Done enabled), cleared. Motion: none required. Do not use an image upload instead of drawing. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个签名板，不是整页。结构：带边框的画布区 + 基线提示，下方 Clear / Done 两个小按钮。交互：指针拖动绘制平滑墨迹，Clear 清空，Done 闪示已保存。状态：空画布、绘制中、有墨迹（Done 可用）、已清空。动效：可无。不要用图片上传代替手写。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "signature" }
+  },
+  {
+    "id": "emoji-picker",
+    "category": "special",
+    "name_zh": "表情选择器",
+    "name_en": "Emoji Picker",
+    "aliases": [],
+    "when_to_use": "聊天/评论中插入表情",
+    "prompt_en": "Build a single Emoji Picker panel, not a full page. Structure: a trigger smiley button opening a compact grid of 24 unicode emoji grouped under two category tabs (Faces, Gestures), with a preview line showing the last hovered one. Interaction: click tabs to switch groups, hover previews, click inserts and closes. States: closed, open, tab active, emoji hover, inserted flash. Motion: 150ms panel fade. Do not use image assets — use unicode characters. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji in the UI chrome itself.",
+    "prompt_zh": "做一个表情选择面板，不是整页。结构：笑脸触发按钮展开紧凑网格，24 个 unicode 表情按两个分类页签（表情、手势）分组，底部预览行显示最后悬停项。交互：点页签切换分组、悬停预览、点击插入并关闭。状态：收起、展开、页签活动、表情悬停、已插入闪示。动效：面板 150ms 淡入。不要用图片资源——用 unicode 字符。若项目已有设计系统，颜色取自 token，结构和交互保持不变。界面装饰本身不要 emoji。",
+    "demo": { "type": "emoji-picker", "groups": { "表情": ["😀", "😅", "😊", "😍", "🤔", "😴", "😎", "🥳", "😭", "😡", "🤯", "🫠"], "手势": ["👍", "👎", "👏", "🙏", "🤝", "✌️", "🤙", "💪", "🖐️", "👌", "🫶", "🤌"] } }
+  },
+  {
+    "id": "pin-input",
+    "category": "special",
+    "name_zh": "支付密码输入",
+    "name_en": "PIN Input",
+    "aliases": ["Password Digits"],
+    "when_to_use": "掩码显示的短数字密码，如支付 PIN",
+    "prompt_en": "Build a single four-digit PIN Input, not a full page. Structure: four boxes like an OTP input but characters are masked as dots after a short delay. Interaction: typing advances focus, backspace goes back, paste fills all, digits become dots 300ms after entry. States: empty, filled, masked, error shake optional. Motion: 300ms mask delay per digit. Do not show the digits permanently. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个四位支付密码输入，不是整页。结构：四个格子同 OTP 样式，但字符在短暂延迟后掩码为圆点。交互：输入跳格、退格回退、粘贴填满、数字输入 300ms 后变圆点。状态：空、已填、已掩码、错误抖动（可选）。动效：每位 300ms 掩码延迟。不要长期明文显示数字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "otp", "length": 4, "mask": true }
+  }
+]

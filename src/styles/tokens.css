@@ -1,0 +1,40 @@
+/* tokens.css —— 全站唯一颜色定义处。所有样式只允许引用这里的变量。 */
+
+:root,
+[data-theme='light'] {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-hover: #f0f2f5;
+  --surface-active: #e8eaee;
+  --text: #1a1d21;
+  --text-muted: #6b7280;
+  --border: #e2e4e8;
+  --border-strong: #c9cdd4;
+  --accent: #3b82f6;
+  --accent-soft: #dbeafe;
+  --accent-text: #ffffff;
+  --danger: #ef4444;
+  --ok: #22c55e;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --code-bg: #f3f4f6;
+}
+
+[data-theme='dark'] {
+  --bg: #111318;
+  --surface: #1b1e25;
+  --surface-hover: #232730;
+  --surface-active: #2b303b;
+  --text: #e6e8eb;
+  --text-muted: #9aa1ab;
+  --border: #2e333d;
+  --border-strong: #414755;
+  --accent: #60a5fa;
+  --accent-soft: #1e3a5f;
+  --accent-text: #0b1220;
+  --danger: #f87171;
+  --ok: #4ade80;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --code-bg: #22262e;
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "file-tree",
+    "category": "tree",
+    "name_zh": "文件树",
+    "name_en": "File Tree",
+    "aliases": ["Directory Tree"],
+    "when_to_use": "文件管理器式目录浏览",
+    "prompt_en": "Build a single File Tree, not a full page. Structure: an indented tree of folders and files with carets and file-type glyphs, one node selected with a tinted row. Interaction: carets expand/collapse, click a node to select it, double-click a folder toggles too. States: expanded, collapsed, selected, hover. Motion: 150ms expand. Do not allow multi-select. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个文件树，不是整页。结构：文件夹与文件的缩进树，带展开箭头与文件类型符号，一个节点选中着色。交互：箭头展开/收起，点节点选中，双击文件夹同样切换。状态：展开、收起、选中、悬停。动效：150ms 展开。不允许多选。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "file",
+      "selectable": true,
+      "nodes": [
+        { "label": "projects", "children": [
+          { "label": "dictionary", "children": [{ "label": "src", "children": [{ "label": "App.jsx" }, { "label": "main.jsx" }] }, { "label": "package.json" }] },
+          { "label": "notes.txt" }
+        ] }
+      ]
+    }
+  },
+  {
+    "id": "checkable-tree",
+    "category": "tree",
+    "name_zh": "勾选树",
+    "name_en": "Checkable Tree",
+    "aliases": [],
+    "when_to_use": "层级数据的多选（含父子联动）",
+    "prompt_en": "Build a single Checkable Tree, not a full page. Structure: a two-level tree where each node has a checkbox; parent checkboxes show checked / indeterminate / unchecked based on children. Interaction: checking a parent checks all children, unchecking a child updates parent to indeterminate, a footer line lists checked count. States: checked, indeterminate, unchecked, hover. Motion: 100ms check transition. Do not use radio buttons. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个勾选树，不是整页。结构：两层树，每节点带勾选框；父级勾选框根据子级呈现 全选/半选/未选。交互：勾父级全选子级，取消子级后父级变半选，底部一行显示已选数量。状态：全选、半选、未选、悬停。动效：100ms 勾选过渡。不要用单选按钮。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "checkable",
+      "nodes": [
+        { "label": "华东区", "children": [{ "label": "上海" }, { "label": "杭州" }] },
+        { "label": "华南区", "children": [{ "label": "广州" }, { "label": "深圳" }] }
+      ]
+    }
+  },
+  {
+    "id": "org-tree",
+    "category": "tree",
+    "name_zh": "组织架构树",
+    "name_en": "Org Tree",
+    "aliases": ["Horizontal Tree"],
+    "when_to_use": "组织架构的横向层级展示",
+    "prompt_en": "Build a single horizontal Org Tree, not a full page. Structure: a root node (公司) at top connected by elbow lines to two child nodes, one child having two leaf nodes below it; nodes are compact cards. Interaction: click a node highlights it and its path to root. States: default, highlighted path, hover. Motion: 120ms highlight. Do not lay it out vertically like a file tree. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个横向组织架构树，不是整页。结构：根节点（公司）在顶部，用折线连接两个子节点，其中一个子节点下挂两个叶子；节点为紧凑卡片。交互：点节点高亮它及到根的路径。状态：默认、路径高亮、悬停。动效：120ms 高亮。不要排成纵向文件树。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "org",
+      "root": { "label": "公司", "children": [
+        { "label": "产品部", "children": [{ "label": "设计组" }, { "label": "研发组" }] },
+        { "label": "市场部" }
+      ] }
+    }
+  },
+  {
+    "id": "searchable-tree",
+    "category": "tree",
+    "name_zh": "可搜索树",
+    "name_en": "Searchable Tree",
+    "aliases": [],
+    "when_to_use": "大树里快速定位节点",
+    "prompt_en": "Build a single Searchable Tree, not a full page. Structure: a search input above a five-level file tree; typing filters to matching nodes and auto-expands their ancestor paths, highlighting matched text. Interaction: typing filters live, clearing restores the tree, match highlights persist. States: idle, filtering, matches highlighted, no-match hint. Motion: 150ms expand. Do not collapse matched branches. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个可搜索树，不是整页。结构：搜索输入框在五层文件树上方；输入过滤出匹配节点并自动展开其祖先路径，命中文字高亮。交互：实时过滤，清空恢复整树，高亮保留。状态：空闲、过滤中、命中高亮、无匹配提示。动效：150ms 展开。不要收起命中的分支。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "searchable",
+      "nodes": [
+        { "label": "docs", "children": [
+          { "label": "guide.md" },
+          { "label": "api", "children": [{ "label": "overview.md" }, { "label": "auth.md" }] }
+        ] },
+        { "label": "src", "children": [{ "label": "index.js" }, { "label": "utils.js" }] }
+      ]
+    }
+  },
+  {
+    "id": "draggable-tree",
+    "category": "tree",
+    "name_zh": "可拖拽树",
+    "name_en": "Draggable Tree",
+    "aliases": [],
+    "when_to_use": "调整层级节点位置",
+    "prompt_en": "Build a single Draggable Tree, not a full page. Structure: a flat-looking list of three items and one folder where leaf items can be dragged into or out of the folder with a drop highlight. Interaction: drag a leaf onto the folder to nest it (row indents, folder opens), drag out to flatten. States: idle, dragging, drop-target highlighted. Motion: 150ms indent shift. Do not allow dragging the folder itself. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个可拖拽树，不是整页。结构：扁平列表含三个条目与一个文件夹，叶子条目可拖入/拖出文件夹并有落点高亮。交互：拖叶子到文件夹上嵌套（行缩进、文件夹展开），拖出还原。状态：空闲、拖动中、落点高亮。不要允许拖动文件夹本身。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "draggable",
+      "items": ["任务 A", "任务 B", "任务 C"],
+      "folder": "已完成"
+    }
+  },
+  {
+    "id": "comment-tree",
+    "category": "tree",
+    "name_zh": "嵌套评论树",
+    "name_en": "Comment Thread",
+    "aliases": ["Discussion Tree"],
+    "when_to_use": "评论的楼中楼结构",
+    "prompt_en": "Build a single Comment Thread, not a full page. Structure: one root comment (avatar monogram, name, two-line text, 回复 link) with two nested replies indented under a left guide line; one reply has its own nested reply. Interaction: 回复 link opens a tiny inline input under that comment, Enter adds a nested reply. States: default, input open, newly added highlight. Motion: 200ms expand of the input. Do not flatten replies. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个嵌套评论树，不是整页。结构：一条根评论（字母头像、昵称、两行文字、回复链接）+ 左侧引导线缩进的两条回复，其中一条再嵌套一条。交互：点回复在该评论下展开迷你输入框，Enter 添加嵌套回复。状态：默认、输入展开、新回复高亮。动效：输入框 200ms 展开。不要把回复拍平。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "tree-view",
+      "variant": "comments",
+      "root": { "name": "四喜", "text": "这个词典太实用了，提示词直接能用。" },
+      "replies": [
+        { "name": "阿福", "text": "收藏了，Tabs 分类很全。", "replies": [{ "name": "四喜", "text": "后面还会补 186 个！" }] },
+        { "name": "小明", "text": "求一个命令面板组件。" }
+      ]
+    }
+  }
+]

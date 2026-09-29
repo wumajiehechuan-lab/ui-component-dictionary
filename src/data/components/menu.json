@@ -1,0 +1,105 @@
+[
+  {
+    "id": "dropdown-menu",
+    "category": "menu",
+    "name_zh": "下拉菜单",
+    "name_en": "Dropdown Menu",
+    "aliases": ["Action Menu"],
+    "when_to_use": "按钮点开的一组动作列表",
+    "prompt_en": "Build a single Dropdown Menu, not a full page. Structure: a trigger button (⋯ or Actions) opening a vertical list of 4-5 action items with a divider between groups. Interaction: click to open, click item flashes selected and closes, click outside/Esc closes. States: open, item hover, item disabled, danger item in red. Motion: 150ms fade+scale. Do not use a select/listbox — items are actions, not values. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个下拉菜单，不是整页。结构：触发按钮（⋯ 或 Actions）展开纵向动作列表 4-5 项，组间有分隔线。交互：点击展开，点项闪示后关闭，点外/Esc 关闭。状态：展开、项悬停、项禁用、危险项红色。动效：150ms 淡入微缩放。不要用选择列表——项是动作不是取值。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "dropdown", "items": ["编辑", "复制链接", "置顶", "删除"], "danger": ["删除"] }
+  },
+  {
+    "id": "context-menu",
+    "category": "menu",
+    "name_zh": "右键菜单",
+    "name_en": "Context Menu",
+    "aliases": ["Right-click Menu"],
+    "when_to_use": "右键唤出的上下文操作",
+    "prompt_en": "Build a single Context Menu, not a full page. Structure: a demo target area; right-click (or long-press) anywhere inside it opens a menu at the cursor position with 4 items. Interaction: right-click opens at pointer coordinates, click item closes, click elsewhere closes. States: closed, open (positioned at cursor), item hover. Motion: 120ms fade. Do not open it from a button. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个右键菜单，不是整页。结构：一个演示目标区域；在区域内右键（或长按）在光标位置弹出含 4 项的菜单。交互：右键在指针坐标打开，点项关闭，点其他处关闭。状态：关闭、打开（定位在光标处）、项悬停。动效：120ms 淡入。不要从按钮打开。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "context", "items": ["打开", "重命名", "移动到…", "删除"], "danger": ["删除"] }
+  },
+  {
+    "id": "menu-bar",
+    "category": "menu",
+    "name_zh": "菜单栏",
+    "name_en": "Menu Bar",
+    "aliases": ["App Menu"],
+    "when_to_use": "桌面应用顶部的一级菜单",
+    "prompt_en": "Build a single Menu Bar, not a full page. Structure: a horizontal bar with three top-level labels (File, Edit, View); clicking one opens its dropdown under the label, hovering another label while open switches menus. Interaction: click to open, hover-switch between top labels while open, Esc closes. States: label hover, open menu, item hover. Motion: 120ms fade. Do not use accordion behavior. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个菜单栏，不是整页。结构：横向栏含三个一级标签（File、Edit、View），点击某个在其下方弹出下拉；展开时悬停其他标签会切换菜单。交互：点击打开，展开状态下悬停切换一级标签，Esc 关闭。状态：标签悬停、菜单展开、项悬停。动效：120ms 淡入。不要用手风琴行为。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "menu",
+      "variant": "bar",
+      "menus": { "File": ["New", "Open…", "Save"], "Edit": ["Undo", "Redo", "Cut", "Copy"], "View": ["Zoom in", "Zoom out"] }
+    }
+  },
+  {
+    "id": "checkbox-menu",
+    "category": "menu",
+    "name_zh": "勾选菜单",
+    "name_en": "Checkbox Menu",
+    "aliases": ["Multi-select Menu"],
+    "when_to_use": "菜单里开关多个选项，如显示列",
+    "prompt_en": "Build a single Checkbox Menu, not a full page. Structure: a trigger opening a menu where each item has a leading checkbox that toggles without closing the menu; a footer line shows how many are checked. Interaction: click items to toggle, menu stays open, outside click closes. States: checked, unchecked, hover. Motion: 100ms check transition. Do not close on item click. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个勾选菜单，不是整页。结构：触发器展开菜单，每项前面有勾选框，点击切换且不关闭菜单，底部一行显示已勾选数量。交互：点项切换，菜单保持展开，点外关闭。状态：已勾、未勾、悬停。动效：100ms 勾选过渡。点项不要关闭菜单。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "checkbox", "items": ["名称", "大小", "修改时间", "类型"], "defaultChecked": ["名称", "修改时间"] }
+  },
+  {
+    "id": "submenu-menu",
+    "category": "menu",
+    "name_zh": "子菜单",
+    "name_en": "Submenu",
+    "aliases": ["Nested Menu"],
+    "when_to_use": "菜单项还有下一级",
+    "prompt_en": "Build a single menu with a Submenu, not a full page. Structure: a dropdown where one item (Export as) has a caret and hovering it slides out a second-level panel to the right with 3 options. Interaction: hover or click the parent item opens the submenu, moving away closes it. States: parent hover, submenu open, submenu item hover. Motion: 120ms slide-in. Do not use an accordion push-down. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个带子菜单的下拉，不是整页。结构：下拉中某项（Export as）带右箭头，悬停时向右滑出二级面板含 3 个选项。交互：悬停或点击父项打开子菜单，移开关闭。状态：父项悬停、子菜单展开、子项悬停。动效：120ms 滑入。不要用向下推开的折叠。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "submenu", "items": ["复制", "移动…", "导出为"], "submenu": { "导出为": ["PDF", "PNG", "Markdown"] } }
+  },
+  {
+    "id": "icon-menu",
+    "category": "menu",
+    "name_zh": "图标菜单",
+    "name_en": "Icon Menu",
+    "aliases": [],
+    "when_to_use": "每项带图标的动作菜单",
+    "prompt_en": "Build a single Icon Menu, not a full page. Structure: a dropdown whose items each have a small leading glyph and label (Share, Duplicate, Archive, Trash in danger red). Interaction: standard open/select/close. States: open, item hover with tinted glyph, danger item. Motion: 150ms fade. Do not omit the text labels. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个图标菜单，不是整页。结构：下拉每项带前置小符号和文字（Share、Duplicate、Archive、Trash 为红色危险项）。交互：标准展开/选择/关闭。状态：展开、项悬停（符号着色）、危险项。动效：150ms 淡入。不要省略文字标签。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "icon", "items": ["分享", "复制副本", "归档", "删除"], "danger": ["删除"] }
+  },
+  {
+    "id": "overflow-menu",
+    "category": "menu",
+    "name_zh": "溢出菜单",
+    "name_en": "Overflow Menu",
+    "aliases": ["Kebab Menu", "⋯ Menu"],
+    "when_to_use": "卡片/列表行的更多操作收纳",
+    "prompt_en": "Build a single Overflow (kebab) Menu, not a full page. Structure: a small ⋯ icon button that opens a compact right-aligned menu with 3-4 items, opening upward if near the bottom. Interaction: click to open, select to close. States: open, item hover, danger item. Motion: 150ms fade with slight upward shift. Do not use a full-width menu. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个溢出（竖点）菜单，不是整页。结构：小 ⋯ 图标按钮展开紧凑的右对齐菜单含 3-4 项，靠近底部时向上展开。交互：点击展开，选择后关闭。状态：展开、项悬停、危险项。动效：150ms 淡入并轻微上移。不要用全宽菜单。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "kebab", "items": ["置顶", "静音", "举报"] }
+  },
+  {
+    "id": "shortcut-menu",
+    "category": "menu",
+    "name_zh": "快捷键菜单",
+    "name_en": "Menu with Shortcuts",
+    "aliases": [],
+    "when_to_use": "菜单项右侧显示快捷键",
+    "prompt_en": "Build a single Menu with Shortcuts, not a full page. Structure: a dropdown whose items show a muted keyboard shortcut (Ctrl+C style kbd chip) right-aligned. Interaction: standard open/select; pressing a listed shortcut inside the demo area highlights the matching item briefly. States: open, item hover, shortcut chip. Motion: 150ms fade. Do not truncate shortcut chips on narrow width. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个带快捷键的菜单，不是整页。结构：下拉项右侧灰色的键盘快捷键（Ctrl+C 样式 kbd 小片）。交互：标准展开/选择；在演示区内按下列出的快捷键时，对应项短暂高亮。状态：展开、项悬停、快捷键小片。动效：150ms 淡入。窄宽度下不要截断快捷键。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "shortcut", "items": [["复制", "Ctrl+C"], ["粘贴", "Ctrl+V"], ["撤销", "Ctrl+Z"]] }
+  },
+  {
+    "id": "user-menu",
+    "category": "menu",
+    "name_zh": "用户菜单",
+    "name_en": "User Menu",
+    "aliases": ["Account Menu"],
+    "when_to_use": "头像点开的账户操作",
+    "prompt_en": "Build a single User Menu, not a full page. Structure: an avatar trigger opening a right-aligned panel with a header (avatar, name, email), a divider, and items (Profile, Settings, Sign out in danger). Interaction: click avatar opens, item click closes. States: open, item hover, header block. Motion: 150ms fade. Do not include a search field. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个用户菜单，不是整页。结构：头像触发器展开右对齐面板：头部（头像、姓名、邮箱）、分隔线、操作项（Profile、Settings、Sign out 为危险色）。交互：点头像展开，点项关闭。状态：展开、项悬停、头部区块。动效：150ms 淡入。不要包含搜索框。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "menu", "variant": "user", "user": { "name": "四喜", "email": "sixi@example.com" }, "items": ["个人主页", "设置", "退出登录"], "danger": ["退出登录"] }
+  }
+]

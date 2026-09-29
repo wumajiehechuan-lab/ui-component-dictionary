@@ -1,0 +1,102 @@
+[
+  {
+    "id": "basic-accordion",
+    "category": "accordion",
+    "name_zh": "基础折叠面板",
+    "name_en": "Accordion",
+    "aliases": ["Collapse"],
+    "when_to_use": "多组内容就地展开收起",
+    "prompt_en": "Build a single Accordion, not a full page. Structure: three collapsible sections with header rows (title + rotating chevron) and content bodies; multiple can be open at once. Interaction: click header toggles its section only. States: collapsed, expanded, hover header. Motion: 200ms height transition. Do not close other sections when opening one. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个基础折叠面板，不是整页。结构：三个可折叠区块，头部行（标题 + 旋转箭头）+ 内容体；允许多个同时展开。交互：点头部只切换该区块。状态：收起、展开、头部悬停。动效：200ms 高度过渡。展开一个时不要关闭其他。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "accordion",
+      "multiple": true,
+      "items": [
+        { "title": "什么是组件词典？", "body": "收录常用 UI 组件的可交互卡片，复制提示词即可让 AI 生成同款。" },
+        { "title": "提示词怎么写？", "body": "按名称、变体、结构、交互、状态、动效六要素组织。" },
+        { "title": "可以离线使用吗？", "body": "可以，全部资源本地化，构建产物断网可用。" }
+      ]
+    }
+  },
+  {
+    "id": "single-accordion",
+    "category": "accordion",
+    "name_zh": "手风琴",
+    "name_en": "Single-expand Accordion",
+    "aliases": [],
+    "when_to_use": "同时只允许展开一项",
+    "prompt_en": "Build a single Single-expand Accordion, not a full page. Structure: three sections where opening one automatically collapses the others; exactly zero or one section open at a time. Interaction: click header to open (closing others), click again to close. States: open section highlighted header, closed, hover. Motion: 200ms height with the closing and opening animating together. Do not allow two open. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个手风琴，不是整页。结构：三个区块，展开一个会自动收起其他，任一时刻最多一个展开。交互：点头部展开（收起其他），再点收起。状态：展开区块头部高亮、收起、悬停。动效：200ms 高度，收起与展开同时进行。不允许两个同时展开。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "accordion",
+      "items": [
+        { "title": "第一章 安装", "body": "解压即用，无需安装依赖。" },
+        { "title": "第二章 上手", "body": "先读使用口诀，再按分类查找组件。" },
+        { "title": "第三章 进阶", "body": "自定义 demo 数据与提示词模板。" }
+      ]
+    }
+  },
+  {
+    "id": "bordered-accordion",
+    "category": "accordion",
+    "name_zh": "边框折叠面板",
+    "name_en": "Bordered Accordion",
+    "aliases": ["Boxed Collapse"],
+    "when_to_use": "视觉上分区更明显的折叠组",
+    "prompt_en": "Build a single Bordered Accordion, not a full page. Structure: three independently boxed sections, each a rounded bordered panel; expanded panel has an accent-tinted header. Interaction: click header toggles that panel. States: collapsed panel, expanded (tinted header), hover. Motion: 200ms height. Do not merge them into one continuous list. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个边框折叠面板，不是整页。结构：三个独立的盒子区块，各自是圆角带边框面板；展开面板头部带强调色淡底。交互：点头部切换该面板。状态：收起面板、展开（头部着色）、悬停。动效：200ms 高度。不要合并成一条连续列表。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "accordion",
+      "bordered": true,
+      "items": [
+        { "title": "配送说明", "body": "默认 48 小时内发货，偏远地区另计。" },
+        { "title": "退换政策", "body": "签收后 7 天内可无理由退换。" },
+        { "title": "发票", "body": "支持电子普票与专票。" }
+      ]
+    }
+  },
+  {
+    "id": "faq-accordion",
+    "category": "accordion",
+    "name_zh": "FAQ 折叠",
+    "name_en": "FAQ Accordion",
+    "aliases": [],
+    "when_to_use": "常见问题列表页",
+    "prompt_en": "Build a single FAQ Accordion, not a full page. Structure: four question rows styled as minimal dividers (no boxes) with a plus icon that rotates to × when open. Interaction: click toggles; multiple open allowed. States: closed (plus), open (×), hover underline. Motion: 200ms expand + icon rotate. Do not use numbered prefixes. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个 FAQ 折叠，不是整页。结构：四行极简分隔线样式的问题（不用盒子），加号图标展开时旋转为 ×。交互：点击切换，允许多个展开。状态：收起（加号）、展开（×）、悬停下划线。动效：200ms 展开 + 图标旋转。不要用数字前缀。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "accordion",
+      "faq": true,
+      "items": [
+        { "title": "数据存在哪里？", "body": "全部存在本地浏览器，不联网上传。" },
+        { "title": "支持哪些浏览器？", "body": "Chrome/Edge/Safari/Firefox 近两个大版本。" },
+        { "title": "如何新增组件？", "body": "在 JSON 里加一条数据即可，见 README。" },
+        { "title": "可以商用吗？", "body": "自用与内部使用无限制。" }
+      ]
+    }
+  },
+  {
+    "id": "nested-accordion",
+    "category": "accordion",
+    "name_zh": "嵌套折叠",
+    "name_en": "Nested Accordion",
+    "aliases": [],
+    "when_to_use": "折叠里再套折叠的两级结构",
+    "prompt_en": "Build a single Nested Accordion, not a full page. Structure: a top-level section that, when expanded, contains two second-level collapsible rows indented with a left guide line. Interaction: top header toggles the group; inner headers toggle their rows independently. States: group open/closed, inner open/closed. Motion: 200ms each level. Do not auto-collapse inner rows when closing the group and reopening. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个嵌套折叠，不是整页。结构：一个一级区块展开后内含两个带缩进和左侧引导线的二级可折叠行。交互：一级头部切换整组；二级头部独立切换各自行。状态：组展开/收起、内层展开/收起。动效：每级 200ms。关闭组再打开时不要自动收起内层。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "accordion",
+      "nested": true,
+      "items": [
+        {
+          "title": "前端规范",
+          "body": "",
+          "children": [
+            { "title": "命名约定", "body": "组件 PascalCase，变量 camelCase。" },
+            { "title": "目录结构", "body": "数据、渲染、样式三层分离。" }
+          ]
+        }
+      ]
+    }
+  }
+]

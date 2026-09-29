@@ -1,0 +1,68 @@
+[
+  {
+    "id": "no-data-empty",
+    "category": "empty",
+    "name_zh": "无数据空状态",
+    "name_en": "Empty State",
+    "aliases": ["No Data"],
+    "when_to_use": "列表/面板暂无内容",
+    "prompt_en": "Build a single Empty State block, not a full page. Structure: a centered illustration placeholder (simple SVG shapes or a muted glyph), a 暂无数据 title, one hint line, and a ghost action button. Interaction: hover on button only. States: default, hover. Motion: none required. Do not use a stock photo. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个无数据空状态块，不是整页。结构：居中插画占位（简单 SVG 形状或灰色符号）、标题「暂无数据」、一行提示、幽灵样式动作按钮。交互：仅按钮悬停。状态：默认、悬停。动效：可无。不要用照片素材。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "no-data", "title": "暂无数据", "hint": "创建第一个项目后，这里会展示内容。", "action": "新建项目" }
+  },
+  {
+    "id": "no-search-result",
+    "category": "empty",
+    "name_zh": "搜索无结果",
+    "name_en": "No Search Results",
+    "aliases": [],
+    "when_to_use": "搜索无命中时的引导",
+    "prompt_en": "Build a single No-search-results block, not a full page. Structure: a centered magnifier glyph, title 没有找到相关结果, a line echoing the searched keyword in quotes, and two ghost suggestion chips (试试：组件、提示词). Interaction: clicking a chip flashes it as applied. States: default, chip clicked. Motion: 120ms flash. Do not show a generic error. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个搜索无结果块，不是整页。结构：居中放大镜符号、标题「没有找到相关结果」、一行带引号回显搜索词、两个幽灵建议 chip（试试：组件、提示词）。交互：点 chip 闪示已应用。状态：默认、chip 点击。动效：120ms 闪示。不要显示通用错误。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "no-results", "keyword": "下拉多选框", "suggestions": ["组件", "提示词"] }
+  },
+  {
+    "id": "no-network-empty",
+    "category": "empty",
+    "name_zh": "网络异常空状态",
+    "name_en": "Network Error State",
+    "aliases": ["Offline State"],
+    "when_to_use": "断网/请求失败的页面级提示",
+    "prompt_en": "Build a single Network Error state block, not a full page. Structure: a centered disconnected-plug glyph, title 网络连接失败, one hint line, and a 重新连接 primary button that shows a spinner for 1.5s then returns to error. Interaction: button replays the retry cycle. States: error, retrying, back to error. Motion: spinner rotation. Do not blame the user in copy. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个网络异常空状态块，不是整页。结构：居中断连插头符号、标题「网络连接失败」、一行提示、重新连接主按钮（点击 spinner 1.5 秒后回到错误态）。交互：按钮重播重试周期。状态：错误、重试中、回到错误。动效：spinner 旋转。文案不要指责用户。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "network", "title": "网络连接失败", "hint": "请检查网络后重试。" }
+  },
+  {
+    "id": "first-use-empty",
+    "category": "empty",
+    "name_zh": "首次使用空状态",
+    "name_en": "First-use Empty State",
+    "aliases": ["Onboarding Empty"],
+    "when_to_use": "新用户零数据时的引导",
+    "prompt_en": "Build a single First-use Empty block, not a full page. Structure: a welcome glyph, title 欢迎使用, a two-step hint list (1. 导入数据 2. 开始使用) and a highlighted primary button 导入示例数据. Interaction: button click fills a fake progress then a done check. States: idle, importing, done. Motion: 200ms progress. Do not show secondary links. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个首次使用空状态块，不是整页。结构：欢迎符号、标题「欢迎使用」、两步引导列表（1. 导入数据 2. 开始使用）、高亮主按钮「导入示例数据」。交互：按钮点击显示假进度后变完成勾。状态：空闲、导入中、完成。动效：200ms 进度。不要显示次级链接。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "first-use", "steps": ["导入数据", "开始使用"] }
+  },
+  {
+    "id": "no-permission-empty",
+    "category": "empty",
+    "name_zh": "无权限空状态",
+    "name_en": "No Permission State",
+    "aliases": [],
+    "when_to_use": "权限不足时的提示",
+    "prompt_en": "Build a single No-permission block, not a full page. Structure: a centered lock glyph, title 没有访问权限, one line explaining what is needed, and a 申请权限 ghost button. Interaction: button click shows a brief 申请已提交 state. States: default, requested. Motion: 150ms state swap. Do not offer a back link. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个无权限空状态块，不是整页。结构：居中锁符号、标题「没有访问权限」、一行说明所需权限、申请权限幽灵按钮。交互：点击后短暂显示「申请已提交」。状态：默认、已申请。动效：150ms 状态切换。不要提供返回链接。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "no-permission", "hint": "需要管理员权限查看此页面。" }
+  },
+  {
+    "id": "empty-cart",
+    "category": "empty",
+    "name_zh": "购物车空状态",
+    "name_en": "Empty Cart",
+    "aliases": [],
+    "when_to_use": "购物车/收藏夹为空",
+    "prompt_en": "Build a single Empty Cart block, not a full page. Structure: a centered cart glyph, title 购物车还是空的, one hint, and a 去逛逛 primary button; a small row of two recommended mini-cards sits below. Interaction: hover on mini-cards lifts them. States: default, hover. Motion: 150ms lift. Do not leave the block action-less. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个购物车空状态块，不是整页。结构：居中购物车符号、标题「购物车还是空的」、一行提示、去逛逛主按钮；下方两个推荐迷你卡片小行。交互：迷你卡悬停抬升。状态：默认、悬停。动效：150ms 抬升。不要让区块没有动作。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": { "type": "empty-demo", "variant": "empty-cart", "recs": ["机械键盘", "人体工学椅"] }
+  }
+]

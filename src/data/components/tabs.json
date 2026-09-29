@@ -1,0 +1,172 @@
+[
+  {
+    "id": "underlined-tabs",
+    "category": "tabs",
+    "name_zh": "下划线标签",
+    "name_en": "Underlined Tabs",
+    "aliases": ["Line Tabs"],
+    "when_to_use": "细线跟着 Tab 走，内容区平铺切换",
+    "prompt_en": "Build a single set of Underlined Tabs, not a full page. Structure: a horizontal row of three text tabs (Overview, Billing, Settings) with a thin underline under the active tab, and one content panel below. Interaction: click a tab to switch the panel; the underline moves to the clicked tab. States: active tab (underline + stronger text), inactive tab, hover. Motion: underline slides to the new position in 200ms. Do not use a Slider or Pill Tabs — the indicator is a thin bottom line, not a filled capsule. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组下划线标签，不是整页。结构：横向三个文字标签（Overview、Billing、Settings），活动标签下方有一条细下划线，下方一个内容面板。交互：点标签切换面板，下划线移动到所点标签。状态：活动（下划线 + 文字加重）、非活动、悬停。动效：下划线 200ms 滑动到新位置。不要做成滑块或胶囊标签——指示器是底部细线，不是填充胶囊。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "underlined-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "sliding-indicator-tabs",
+    "category": "tabs",
+    "name_zh": "滑动指示标签",
+    "name_en": "Tabs with Sliding Indicator",
+    "aliases": [],
+    "when_to_use": "活动背景块在标签间平滑滑动",
+    "prompt_en": "Build a single set of Tabs with a Sliding Indicator, not a full page. Structure: three tabs in a track (Overview, Billing, Settings) with a filled rounded rectangle behind the active tab that slides between positions, plus one content panel below. Interaction: click a tab, the background block slides to it and the panel switches. States: active (background block), inactive, hover. Motion: background block slides 250ms with ease-out. Do not use a thin underline indicator — it must be a filled moving block. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组滑动指示标签，不是整页。结构：轨道内三个标签（Overview、Billing、Settings），活动标签背后有一个填充圆角矩形随切换滑动，下方一个内容面板。交互：点标签，背景块滑到该标签并切换面板。状态：活动（背景块）、非活动、悬停。动效：背景块 250ms ease-out 滑动。不要用细下划线指示——必须是填充滑块。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "sliding-indicator-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "pill-tabs",
+    "category": "tabs",
+    "name_zh": "胶囊标签",
+    "name_en": "Pill Tabs",
+    "aliases": [],
+    "when_to_use": "活动项呈胶囊高亮，轻量切换",
+    "prompt_en": "Build a single set of Pill Tabs, not a full page. Structure: three pill-shaped tabs in a row (Overview, Billing, Settings), the active one filled with the accent color, one small content line below. Interaction: click to switch active pill and content. States: active pill (filled), inactive pill (outlined or ghost), hover. Motion: 150ms color/background transition. Do not use an underline or a segmented control inside a grey track. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组胶囊标签，不是整页。结构：横排三个胶囊形标签（Overview、Billing、Settings），活动项用强调色填充，下方一行内容。交互：点击切换活动胶囊与内容。状态：活动（填充）、非活动（描边或幽灵态）、悬停。动效：150ms 颜色/背景过渡。不要用下划线，也不要做灰轨道内的分段控制。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "pill-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "segmented-control",
+    "category": "tabs",
+    "name_zh": "分段控制",
+    "name_en": "Segmented Control",
+    "aliases": ["Segmented Button"],
+    "when_to_use": "互斥视图切换，iOS 风格灰轨道",
+    "prompt_en": "Build a single Segmented Control, not a full page. Structure: three equal-width segments inside one grey rounded track (Overview, Billing, Settings), the active segment as a raised white (surface) thumb, no separate content panel needed beyond a one-line readout. Interaction: click a segment to move the thumb. States: active thumb, inactive segment, hover, pressed. Motion: thumb slides 200ms. Do not use free-standing pill tabs — all segments must share one continuous track. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一个分段控制，不是整页。结构：灰色圆角轨道内三个等宽分段（Overview、Billing、Settings），活动分段是凸起的白色（表面色）滑块，下方一行文字读数即可。交互：点分段移动滑块。状态：活动滑块、非活动分段、悬停、按下。动效：滑块 200ms 滑动。不要用独立胶囊标签——所有分段必须在同一条连续轨道内。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "segmented-control",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "contained-tabs",
+    "category": "tabs",
+    "name_zh": "卡片标签",
+    "name_en": "Contained Tabs",
+    "aliases": ["Boxed Tabs"],
+    "when_to_use": "标签自带边框卡片感，与面板连成一体",
+    "prompt_en": "Build a single set of Contained (Boxed) Tabs, not a full page. Structure: three bordered box tabs (Overview, Billing, Settings) sitting on top of a bordered content panel; the active tab visually merges with the panel (shared border, no bottom border on the active tab). Interaction: click to switch tab and panel. States: active (merged with panel), inactive (boxed), hover. Motion: none or 120ms background fade. Do not use underline tabs or pills. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组卡片标签，不是整页。结构：三个带边框的盒子标签（Overview、Billing、Settings）压在带边框的内容面板上方；活动标签与面板连成一体（共享边框，活动标签无下边框）。交互：点击切换标签与面板。状态：活动（与面板融合）、非活动（盒状）、悬停。动效：无或 120ms 背景淡入。不要用下划线标签或胶囊。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "contained-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "folder-tabs",
+    "category": "tabs",
+    "name_zh": "文件夹标签",
+    "name_en": "Folder-style Tabs",
+    "aliases": ["Browser Tabs"],
+    "when_to_use": "文件夹页签/浏览器页签外观",
+    "prompt_en": "Build a single set of Folder-style Tabs, not a full page. Structure: three tabs shaped like file folders or browser tabs (Overview, Billing, Settings) with rounded top corners sitting on a content panel; the active tab connects seamlessly to the panel like an open folder. Interaction: click to switch. States: active (open folder), inactive (closed folder), hover. Motion: none required. Do not use underline or pill shapes. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组文件夹标签，不是整页。结构：三个文件页签/浏览器页签形状的标签（Overview、Billing、Settings），顶部圆角，压在内容面板上；活动标签像打开的文件夹一样与面板无缝相连。交互：点击切换。状态：活动（打开的文件夹）、非活动（合上的文件夹）、悬停。动效：可无。不要用下划线或胶囊形状。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "folder-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "vertical-tabs",
+    "category": "tabs",
+    "name_zh": "垂直标签",
+    "name_en": "Vertical Tabs",
+    "aliases": ["Sidebar Tabs"],
+    "when_to_use": "侧边栏纵向导航切换内容",
+    "prompt_en": "Build a single set of Vertical Tabs, not a full page. Structure: a vertical stack of three tab items (Overview, Billing, Settings) on the left with the active one highlighted by a filled background or a left accent bar, and a content panel to the right. Interaction: click to switch; the indicator moves vertically. States: active, inactive, hover. Motion: 150ms highlight transition. Do not use a horizontal tab row. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组垂直标签，不是整页。结构：左侧纵向堆叠三个标签项（Overview、Billing、Settings），活动项用填充背景或左侧强调条高亮，右侧一个内容面板。交互：点击切换，指示随纵向移动。状态：活动、非活动、悬停。动效：150ms 高亮过渡。不要做成横向标签行。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "vertical-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "icon-tabs",
+    "category": "tabs",
+    "name_zh": "图标标签",
+    "name_en": "Icon Tabs",
+    "aliases": ["Icon-only Tabs"],
+    "when_to_use": "只放图标，空间紧张的工具切换",
+    "prompt_en": "Build a single set of Icon-only Tabs, not a full page. Structure: three tabs each showing only an icon (use simple inline SVG or unicode glyphs for document / credit card / gear), with a visible active indicator (underline or filled background) and one content line below. Interaction: click to switch; hover shows a title tooltip. States: active, inactive, hover, focus-visible. Motion: 150ms indicator transition. Do not add text labels inside the tabs. If a design system exists, map colors to its tokens but keep this structure. No emoji characters, use SVG or text glyphs.",
+    "prompt_zh": "做一组纯图标标签，不是整页。结构：三个只显示图标的标签（用简单内联 SVG 或字符符号表示 文档/账单/齿轮），带可见的活动指示（下划线或填充背景），下方一行内容。交互：点击切换，悬停显示标题提示。状态：活动、非活动、悬停、键盘聚焦。动效：150ms 指示过渡。不要在标签内加文字。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要用 emoji 字符，用 SVG 或字形。",
+    "demo": {
+      "type": "icon-tabs",
+      "tabs": ["Overview", "Billing", "Settings"],
+      "icons": ["📄", "💳", "⚙️"]
+    }
+  },
+  {
+    "id": "icon-label-tabs",
+    "category": "tabs",
+    "name_zh": "图标文字标签",
+    "name_en": "Icon + Label Tabs",
+    "aliases": [],
+    "when_to_use": "图标加文字，语义更清楚",
+    "prompt_en": "Build a single set of Icon + Label Tabs, not a full page. Structure: three tabs each stacking an icon above (or beside) a text label (Overview, Billing, Settings), with an active indicator, and a content panel below. Interaction: click to switch. States: active, inactive, hover. Motion: 150ms transition. Do not use icon-only tabs. If a design system exists, map colors to its tokens but keep this structure. No emoji characters, use SVG or text glyphs.",
+    "prompt_zh": "做一组图标加文字标签，不是整页。结构：三个标签各在文字（Overview、Billing、Settings）上方（或旁边）配一个图标，带活动指示，下方内容面板。交互：点击切换。状态：活动、非活动、悬停。动效：150ms 过渡。不要做成纯图标标签。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要用 emoji 字符，用 SVG 或字形。",
+    "demo": {
+      "type": "icon-label-tabs",
+      "tabs": ["Overview", "Billing", "Settings"],
+      "icons": ["📄", "💳", "⚙️"]
+    }
+  },
+  {
+    "id": "scrollable-tabs",
+    "category": "tabs",
+    "name_zh": "可滚动标签",
+    "name_en": "Scrollable Tabs",
+    "aliases": [],
+    "when_to_use": "标签太多放不下，横向滚动",
+    "prompt_en": "Build a single set of Scrollable Tabs, not a full page. Structure: a horizontal tab strip with 8+ tabs (Overview, Billing, Settings, Teams, Reports, Alerts, Storage, Members, API) inside a fixed-width container that overflows and scrolls horizontally; edges show subtle fade hints; active tab has an underline. Interaction: drag or wheel/shift-scroll to scroll the strip, click a tab to activate (auto-scrolls it into view). States: active, inactive, hover, edge-fade visible. Motion: smooth scroll-into-view 200ms. Do not wrap tabs to a second row. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组可滚动标签，不是整页。结构：固定宽度容器内横排 8 个以上标签（Overview、Billing、Settings、Teams、Reports、Alerts、Storage、Members、API），溢出横向滚动，两端有淡淡的渐隐提示，活动标签带下划线。交互：拖动或滚轮横向滚动标签条，点标签激活（自动滚入视野）。状态：活动、非活动、悬停、边缘渐隐可见。动效：200ms 平滑滚入。不要让标签换行到第二行。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "scrollable-tabs",
+      "tabs": ["Overview", "Billing", "Settings", "Teams", "Reports", "Alerts", "Storage", "Members", "API"]
+    }
+  },
+  {
+    "id": "closable-tabs",
+    "category": "tabs",
+    "name_zh": "可关闭标签",
+    "name_en": "Closable Tabs",
+    "aliases": [],
+    "when_to_use": "每个标签可单独关闭，如编辑器页签",
+    "prompt_en": "Build a single set of Closable Tabs, not a full page. Structure: a tab strip where each tab has a small × button on its right; closing a tab removes it and activates a neighbor; closing the last tab shows a short empty message with a Restore link. Interaction: click × to close, click tab body to activate, Restore brings all tabs back. States: active, inactive, hover (× becomes visible/emphasized), empty state. Motion: 120ms fade-out on removal. Do not use icon-only tabs. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组可关闭标签，不是整页。结构：标签条中每个标签右侧带小 × 按钮；关闭标签后移除并激活相邻标签；全部关闭后显示一行简短空提示和一个「恢复」链接。交互：点 × 关闭，点标签主体激活，「恢复」还原全部标签。状态：活动、非活动、悬停（× 显现或加重）、空状态。动效：移除时 120ms 淡出。不要做成纯图标标签。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "closable-tabs",
+      "tabs": ["Overview", "Billing", "Settings"]
+    }
+  },
+  {
+    "id": "draggable-tabs",
+    "category": "tabs",
+    "name_zh": "可拖动标签",
+    "name_en": "Draggable Tabs",
+    "aliases": ["Reorderable Tabs"],
+    "when_to_use": "拖拽调整标签顺序，如浏览器页签",
+    "prompt_en": "Build a single set of Draggable Tabs, not a full page. Structure: a horizontal tab strip (4-5 tabs) where tabs can be reordered by dragging; content panel below switches with the active tab. Interaction: drag a tab horizontally and drop it between others to reorder (show a clear drop gap/indicator while dragging), click to activate. States: active, inactive, dragging (raised/shadow), drop target gap. Motion: tabs nudge apart smoothly while dragging. Use native HTML5 drag-and-drop. Do not use a sortable library. If a design system exists, map colors to its tokens but keep this structure. No extra page chrome, no emoji.",
+    "prompt_zh": "做一组可拖动标签，不是整页。结构：横向标签条（4-5 个标签），标签可拖拽重排，下方内容面板随活动标签切换。交互：水平拖动标签放到其他标签之间完成重排（拖动时显示明显的落点间隙/指示），点击激活。状态：活动、非活动、拖动中（抬起/阴影）、落点间隙。动效：拖动时其他标签平滑让位。使用原生 HTML5 拖放，不要用排序库。若项目已有设计系统，颜色取自 token，结构和交互保持不变。不要页面级装饰，不要 emoji。",
+    "demo": {
+      "type": "draggable-tabs",
+      "tabs": ["Overview", "Billing", "Settings", "Teams"]
+    }
+  }
+]
