@@ -5,6 +5,8 @@ dist/
 # 桌面版（Electron 打包产物；desktop/dist 为临时副本）
 desktop/dist/
 desktop/release/
+# 桌面版发布 zip 只挂 GitHub Release，不进 git（GitHub 推送单文件限 100MB）
+desktop/*.zip
 
 # 日志与系统文件
 *.log

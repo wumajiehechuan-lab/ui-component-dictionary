@@ -1,8 +1,15 @@
 {
   "name": "ui-component-dictionary",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Vibe Coding UI 组件词典：212 个 UI 组件卡片，双语 AI Prompt + 可交互演示 + 一键复制，深浅双主题；可 Web 运行或打包为桌面应用。",
+  "author": "四喜 (wumajiehechuan-lab)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wumajiehechuan-lab/ui-component-dictionary.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
