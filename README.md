@@ -17,8 +17,21 @@
 ```bash
 npm install        # 首次安装依赖（仅 react / react-dom，无 UI 库）
 npm run dev        # 开发预览 http://localhost:5173
-npm run build      # 构建到 dist/（相对路径，可断网直接双击 dist/index.html）
+npm run build      # 构建到 dist/（注意：type=module 在 file:// 下被 CORS 拦，dist 需走 HTTP 服务打开）
 ```
+
+## 桌面版（Windows 免安装）
+
+`desktop/` 内含 Electron 封装：主进程起本地静态服务托管 `dist/`（保证 clipboard 安全上下文），窗口加载它。
+
+```bash
+cd desktop
+npm install                                  # 走 npmmirror 需设 ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
+npm start                                    # 开发调试
+npm run package                              # 打包到 desktop/release/UI组件词典-win32-x64/
+```
+
+产物为免安装便携文件夹，双击 `UI组件词典.exe` 即用，无网络要求。体积 ~269MB（Electron 运行时为大头）；打包时 `--ignore node_modules`（主进程只用内置模块）。
 
 ## 功能
 

@@ -1,0 +1,15 @@
+{
+  "name": "ui-component-dictionary",
+  "productName": "UI组件词典",
+  "version": "1.0.0",
+  "description": "Vibe Coding UI 组件词典桌面版",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"UI组件词典\" --platform=win32 --arch=x64 --out=release --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
