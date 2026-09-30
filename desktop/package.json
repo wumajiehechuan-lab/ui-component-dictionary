@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "Vibe Coding UI 组件词典桌面版",
   "main": "main.js",
+  "author": "四喜 (wumajiehechuan-lab)",
+  "license": "MIT",
   "scripts": {
     "start": "electron .",
     "package": "electron-packager . \"UI组件词典\" --platform=win32 --arch=x64 --out=release --overwrite"
