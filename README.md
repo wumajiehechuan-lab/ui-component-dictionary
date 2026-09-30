@@ -33,6 +33,8 @@ npm run package                              # 打包到 desktop/release/UI组�
 
 产物为免安装便携文件夹，双击 `UI组件词典.exe` 即用，无网络要求。体积 ~269MB（Electron 运行时为大头）；打包时 `--ignore node_modules`（主进程只用内置模块）。
 
+**▶️ 已发布 v1.0.0 桌面版**：[GitHub Releases](https://github.com/wumajiehechuan-lab/ui-component-dictionary/releases/tag/v1.0.0) 下载 `UI组件词典-v1.0.0-win64.zip`，解压后双击 exe 即用（Windows 64 位，无需安装、断网可用）。
+
 ## 功能
 
 - **搜索**：命中中文俗称 / 标准英文名 / 别名（不区分大小写），与左侧分类叠加生效，头部计数联动
