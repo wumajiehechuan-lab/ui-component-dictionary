@@ -1,5 +1,17 @@
 # Vibe Coding UI 组件词典
 
+[![License](https://img.shields.io/github/license/wumajiehechuan-lab/ui-component-dictionary?style=flat)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/releases)
+[![Stars](https://img.shields.io/github/stars/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/stargazers)
+[![Forks](https://img.shields.io/github/forks/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/network/members)
+[![Issues](https://img.shields.io/github/issues/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/commits)
+
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-Desktop-2B2B2B?logo=electron&logoColor=white)
+![Components](https://img.shields.io/badge/components-212-4CAF50)
+
 复刻「Vibe Coding UI 组件词典」：收录 UI 组件卡片（可交互演示 + 双语 AI Prompt + 一键复制），开发中把卡片下方的英文提示词丢给 AI，即可做出同款组件。
 
 > 灵感说明：本词典概念源自抖音博主的「Vibe Coding UI 组件词典」；全部组件演示与数据均为原创实现。
