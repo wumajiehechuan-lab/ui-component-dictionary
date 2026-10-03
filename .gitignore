@@ -20,6 +20,11 @@ vite.config.js.timestamp-*.mjs
 .env
 .env.*
 
+# 工作区数据（会话记忆等，不进仓库）
+.workbuddy/
+.mcp-shots/
+.verify/
+
 # 编辑器
 .idea/
 .vscode/
