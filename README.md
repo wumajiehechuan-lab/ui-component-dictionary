@@ -16,6 +16,10 @@
 
 > 灵感说明：本词典概念源自抖音博主的「Vibe Coding UI 组件词典」；全部组件演示与数据均为原创实现。
 
+## 在线版
+
+**https://ui-dict.wumajie-hechuan.workers.dev** —— Cloudflare Worker（Git 集成自动构建）：`git push origin main` 即部署，通常 1–2 分钟。注意构建链要求 **Vite ≥ 6**（wrangler autoconfig 的硬性下限）。
+
 ## 预览
 
 ![首页全景](assets/屏幕截图%202026-09-29%20165145.png)
