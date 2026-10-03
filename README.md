@@ -8,7 +8,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/wumajiehechuan-lab/ui-component-dictionary)](https://github.com/wumajiehechuan-lab/ui-component-dictionary/commits)
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
 ![Electron](https://img.shields.io/badge/Electron-Desktop-2B2B2B?logo=electron&logoColor=white)
 ![Components](https://img.shields.io/badge/components-212-4CAF50)
 
