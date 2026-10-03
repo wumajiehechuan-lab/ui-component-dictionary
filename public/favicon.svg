@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- ui-dict favicon: accent blue tile + 2x2 component grid -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="7.5" fill="#3b82f6"/>
+  <rect x="7" y="7" width="8" height="8" rx="2" fill="#ffffff"/>
+  <rect x="17" y="7" width="8" height="8" rx="2" fill="#ffffff" opacity="0.82"/>
+  <rect x="7" y="17" width="8" height="8" rx="2" fill="#ffffff" opacity="0.82"/>
+  <rect x="17.75" y="17.75" width="6.5" height="6.5" rx="1.5" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+</svg>
